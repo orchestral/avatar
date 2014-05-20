@@ -5,6 +5,11 @@ use Orchestra\Avatar\GravatarHandler;
 
 class GravatarHandlerTest extends \PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        m::close();
+    }
+
     public function testSetIdentifierByUserMethod()
     {
         $user = m::mock('User');
