@@ -1,7 +1,5 @@
 <?php namespace Orchestra\Avatar\Abstractable;
 
-use Illuminate\Database\Eloquent\Model;
-
 abstract class AbstractableHandler
 {
     /**

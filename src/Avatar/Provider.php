@@ -38,6 +38,6 @@ class Provider
      */
     public function user($user)
     {
-        return $this->handler->setIdentifierByUser($user);
+        return $this->handler->setIdentifierFromUser($user);
     }
 }
