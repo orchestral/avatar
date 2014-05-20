@@ -6,7 +6,7 @@ class AvatarManager extends Manager
 {
     protected function getGravatarDriver()
     {
-        return new GravatarProvider;
+        return new Provider(new GravatarHandler);
     }
 
     public function getDefaultDriver()

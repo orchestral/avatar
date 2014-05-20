@@ -1,6 +1,16 @@
 <?php namespace Orchestra\Avatar;
 
-abstract class Provider
+class Provider
 {
+    protected $handler;
 
+    public function __construct(AvatarHandlerInterface $handler)
+    {
+        $this->handler = $handler;
+    }
+
+    public function user($user)
+    {
+        //
+    }
 }

@@ -35,7 +35,6 @@ class AvatarServiceProvider extends ServiceProvider
         $this->package('orchestra/avatar', 'orchestra/avatar', $path);
     }
 
-
     /**
      * Get the services provided by the provider.
      *
