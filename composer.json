@@ -4,8 +4,9 @@
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "crynobone",
-			"email": "crynobone@gmail.com"
+			"name": "Mior Muhammad Zaki",
+			"email": "crynobone@gmail.com",
+			"homepage": "https://github.com/crynobone"
 		}
 	],
 	"autoload": {
