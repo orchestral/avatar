@@ -11,9 +11,9 @@ Multiple Avatar Provider for Laravel
 
 ## Version Compatibility
 
-Laravel      | Avatar
-:--------------|:---------------
- 4.1.x	    | 2.1.x
+Laravel  | Avatar
+:--------|:---------
+ 4.1.x   | 2.1.x
 
 ## Installation
 
