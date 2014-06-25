@@ -3,6 +3,13 @@
 abstract class AbstractableHandler
 {
     /**
+     * Configuration.
+     *
+     * @var array
+     */
+    protected $config = array();
+
+    /**
      * Name of the handler.
      *
      * @var string
@@ -23,7 +30,17 @@ abstract class AbstractableHandler
     protected $size;
 
     /**
-     * Set indentifier from user object.
+     * Construct a new Avatar handler.
+     *
+     * @param array $config
+     */
+    public function __construct(array $config)
+    {
+        $this->config = $config;
+    }
+
+    /**
+     * Set identifier from user object.
      *
      * @param  \Illuminate\Database\Eloquent\Model|object   $user
      * @return AbstractableHandler
@@ -38,6 +55,18 @@ abstract class AbstractableHandler
     abstract public function render();
 
     /**
+     * Get user identifier.
+     *
+     * @return string
+     */
+    public function getIdentifier()
+    {
+        return $this->identifier;
+    }
+
+    /**
+     * Set user identifier.
+     *
      * @param  string   $identifier
      * @return AbstractableHandler
      */
@@ -49,6 +78,18 @@ abstract class AbstractableHandler
     }
 
     /**
+     * Get size.
+     *
+     * @return string
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * Set size.
+     *
      * @param  string   $size
      * @return AbstractableHandler
      */

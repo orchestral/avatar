@@ -30,7 +30,8 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test Orchestra\Avatar\AvatarServiceProvider::register method.
+     * Test Orchestra\Avatar\AvatarServiceProvider::register()
+     * method.
      *
      * @test
      */
@@ -49,6 +50,12 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\Orchestra\Avatar\AvatarManager', $app['orchestra.avatar']);
     }
 
+    /**
+     * Test Orchestra\Avatar\AvatarServiceProvider::boot()
+     * method.
+     *
+     * @test
+     */
     public function testBootMethod()
     {
         $app = new Container;

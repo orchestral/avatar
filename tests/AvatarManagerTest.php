@@ -42,6 +42,10 @@ class AvatarManagerTest extends \PHPUnit_Framework_TestCase
     public function testCreateGravatarDriverMethod()
     {
         $app = new Container;
+        $app['config'] = $config = m::mock('\Illuminate\Config\Repository');
+
+        $config->shouldReceive('get')->once()->with('orchestra/avatar')->andReturn(array());
+
         $stub = new AvatarManager($app);
 
         $gravatar = $stub->driver('gravatar');
