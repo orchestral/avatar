@@ -5,15 +5,16 @@ Multiple Avatar Provider for Laravel
 
 [![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/v/stable.png)](https://packagist.org/packages/orchestra/avatar) 
 [![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads.png)](https://packagist.org/packages/orchestra/avatar) 
-[![Build Status](https://travis-ci.org/orchestral/avatar.svg?branch=2.1)](https://travis-ci.org/orchestral/avatar) 
-[![Coverage Status](https://coveralls.io/repos/orchestral/avatar/badge.png?branch=2.1)](https://coveralls.io/r/orchestral/avatar?branch=2.1) 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/orchestral/avatar/badges/quality-score.png?b=2.1)](https://scrutinizer-ci.com/g/orchestral/avatar/?branch=2.1) 
+[![Build Status](https://travis-ci.org/orchestral/avatar.svg?branch=2.2)](https://travis-ci.org/orchestral/avatar) 
+[![Coverage Status](https://coveralls.io/repos/orchestral/avatar/badge.png?branch=2.2)](https://coveralls.io/r/orchestral/avatar?branch=2.2) 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/orchestral/avatar/badges/quality-score.png?b=2.2)](https://scrutinizer-ci.com/g/orchestral/avatar/?branch=2.2) 
 
 ## Version Compatibility
 
-Laravel      | Avatar
-:--------------|:---------------
- 4.1.x	    | 2.1.x
+Laravel  | Avatar
+:--------|:---------
+ 4.1.x   | 2.1.x
+ 4.2.x   | 2.2.x
 
 ## Installation
 
@@ -22,7 +23,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require": {
-		"orchestra/avatar": "2.1.*"
+		"orchestra/avatar": "2.2.*"
 	}	
 }
 ```
@@ -34,7 +35,7 @@ And then run `composer install` to fetch the package.
 You could also simplify the above code by using the following command:
 
 ```
-composer require "orchestra/avatar=2.1.*"
+composer require "orchestra/avatar=2.2.*"
 ```
 
 ### Setup
