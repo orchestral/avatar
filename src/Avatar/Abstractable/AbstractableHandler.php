@@ -43,9 +43,13 @@ abstract class AbstractableHandler
      * Set identifier from user object.
      *
      * @param  \Illuminate\Database\Eloquent\Model|object   $user
+     * @param  string                                       $attribute
      * @return AbstractableHandler
      */
-    abstract public function setIdentifierFromUser($user);
+    public function setIdentifierFromUser($user, $attribute = 'email')
+    {
+        return $this->setIdentifier($user->getAttribute($attribute));
+    }
 
     /**
      * Render the avatar.

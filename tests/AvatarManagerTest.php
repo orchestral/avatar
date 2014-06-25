@@ -44,7 +44,7 @@ class AvatarManagerTest extends \PHPUnit_Framework_TestCase
         $app = new Container;
         $app['config'] = $config = m::mock('\Illuminate\Config\Repository');
 
-        $config->shouldReceive('get')->once()->with('orchestra/avatar')->andReturn(array());
+        $config->shouldReceive('get')->once()->with('orchestra/avatar::config', array())->andReturn(array());
 
         $stub = new AvatarManager($app);
 
