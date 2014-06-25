@@ -40,4 +40,14 @@ class Provider
     {
         return $this->handler->setIdentifierFromUser($user);
     }
+
+    /**
+     * Get current handler.
+     *
+     * @return \Orchestra\Avatar\AvatarHandlerInterface
+     */
+    public function getHandler()
+    {
+        return $this->handler;
+    }
 }

@@ -9,7 +9,7 @@ class AvatarManager extends Manager
      *
      * @return Provider
      */
-    protected function getGravatarDriver()
+    protected function createGravatarDriver()
     {
         return new Provider(new GravatarHandler);
     }

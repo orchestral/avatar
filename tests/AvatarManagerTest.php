@@ -32,4 +32,16 @@ class AvatarManagerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals('gravatar', $stub->getDefaultDriver());
     }
+
+    public function testCreateGravatarDriverMethod()
+    {
+        $app = new Container;
+        $stub = new AvatarManager($app);
+
+        $gravatar = $stub->driver('gravatar');
+
+        $this->assertInstanceOf('\Orchestra\Avatar\Provider', $gravatar);
+        $this->assertInstanceOf('\Orchestra\Avatar\GravatarHandler', $gravatar->getHandler());
+
+    }
 }
