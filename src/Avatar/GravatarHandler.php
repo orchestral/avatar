@@ -5,6 +5,11 @@ use Orchestra\Avatar\Abstractable\AbstractableHandler;
 class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterface
 {
     /**
+     * Service URL.
+     */
+    const URL = 'http://www.gravatar.com/avatar';
+
+    /**
      * {@inheritdoc}
      */
     protected $name = 'gravatar';
@@ -20,32 +25,34 @@ class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterf
     /**
      * {@inheritdoc}
      */
-    public function large()
-    {
-        // TODO: Implement large() method.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function medium()
-    {
-        // TODO: Implement medium() method.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function small()
-    {
-        // TODO: Implement small() method.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function render()
     {
-        // TODO: Implement render() method.
+        return sprintf('%s/%s?s=%d', array(
+            static::URL,
+            $this->getGravatarIdentifier(),
+            $this->getGravatarSize(),
+        ));
+    }
+
+    /**
+     * Get Gravatar identifier.
+     *
+     * @return string
+     */
+    protected function getGravatarIdentifier()
+    {
+        return md5(strtolower(trim($this->getIdentifier())));
+    }
+
+    /**
+     * Get Gravatar size.
+     *
+     * @return mixed
+     */
+    protected function getGravatarSize()
+    {
+        $size = $this->getSize();
+
+        return array_get($this->config, "sizes.{$size}", 'small');
     }
 }
