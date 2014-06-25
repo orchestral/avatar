@@ -46,7 +46,7 @@ Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `app/config/app
 'providers' => array(
 
 	// ...
-	'Orchestra\Avatar\AvatarServiceProvider`,
+	'Orchestra\Avatar\AvatarServiceProvider',
 ),
 ```
 
@@ -56,7 +56,7 @@ You might also want to add `Orchestra\Avatar\Facade` to class aliases in `app/co
 'aliases' => array(
 	
 	// ...
-	'Avatar' => 'Orchestra\Avatar\Facade`,
+	'Avatar' => 'Orchestra\Avatar\Facade',
 ),
 ```
 
