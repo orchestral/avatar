@@ -20,30 +20,6 @@ class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterf
     /**
      * {@inheritdoc}
      */
-    public function large()
-    {
-        // TODO: Implement large() method.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function medium()
-    {
-        // TODO: Implement medium() method.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function small()
-    {
-        // TODO: Implement small() method.
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function render()
     {
         // TODO: Implement render() method.

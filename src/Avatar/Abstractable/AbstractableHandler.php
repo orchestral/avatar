@@ -60,6 +60,36 @@ abstract class AbstractableHandler
     }
 
     /**
+     * Large size.
+     *
+     * @return AbstractableHandler
+     */
+    public function large()
+    {
+        return $this->setSize('large');
+    }
+
+    /**
+     * Medium size.
+     *
+     * @return AbstractableHandler
+     */
+    public function medium()
+    {
+        return $this->setSize('medium');
+    }
+
+    /**
+     * Small size.
+     *
+     * @return AbstractableHandler
+     */
+    public function small()
+    {
+        return $this->setSize('small');
+    }
+
+    /**
      * Render the avatar.
      *
      * @return string
