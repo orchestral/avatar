@@ -2,7 +2,6 @@
 
 interface AvatarHandlerInterface
 {
-
     /**
      * @param  string   $identifier
      * @return AvatarHandlerInterface
@@ -14,7 +13,6 @@ interface AvatarHandlerInterface
      * @return AvatarHandlerInterface
      */
     public function setRating($rating);
-
 
     /**
      * @param  string   $size

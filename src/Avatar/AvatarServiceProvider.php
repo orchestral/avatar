@@ -42,6 +42,6 @@ class AvatarServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['orchestra.avatar'];
+        return array('orchestra.avatar');
     }
 }
