@@ -9,12 +9,6 @@ interface AvatarHandlerInterface
     public function setIdentifier($identifier);
 
     /**
-     * @param  string   $rating
-     * @return AvatarHandlerInterface
-     */
-    public function setRating($rating);
-
-    /**
      * @param  string   $size
      * @return AvatarHandlerInterface
      */

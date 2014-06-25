@@ -17,13 +17,6 @@ abstract class AbstractableHandler
     protected $identifier;
 
     /**
-     * Maximum rating for avatar (for handler that support it).
-     *
-     * @var string
-     */
-    protected $rating;
-
-    /**
      *
      * @var string
      */
@@ -54,18 +47,6 @@ abstract class AbstractableHandler
 
         return $this;
     }
-
-    /**
-     * @param  string   $rating
-     * @return AbstractableHandler
-     */
-    public function setRating($rating)
-    {
-        $this->rating = $rating;
-
-        return $this;
-    }
-
 
     /**
      * @param  string   $size
