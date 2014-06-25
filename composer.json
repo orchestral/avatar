@@ -1,6 +1,6 @@
 {
 	"name": "orchestra/avatar",
-	"description": "[WIP] Multiple Avatar Provider for Laravel",
+	"description": "Multiple Avatar Provider for Laravel",
 	"license": "MIT",
 	"authors": [
 		{
