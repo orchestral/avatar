@@ -5,6 +5,11 @@ title: Avatar Change Log
 
 ## Version 2.2 {#v2-2}
 
+### v2.2.1 {#v2-2-1}
+
+* Fixes configuration is missing when rendering avatar.
+* Move `Orchestra\Avatar\GravatarHandler::setIdentifierFromUser()` to `Orchestra\Avatar\Abstractable\AbstractableHandler`.
+
 ### v2.2.0 {#v2-2-0}
 
 * Bump minimum version to PHP v5.4.0.
