@@ -21,6 +21,6 @@ class AvatarManager extends Manager
      */
     public function getDefaultDriver()
     {
-        return 'gravatar';
+        return $this->app['config']->get('orchestra/avatar::driver', 'gravatar');
     }
 }
