@@ -17,14 +17,6 @@ class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterf
     /**
      * {@inheritdoc}
      */
-    public function setIdentifierFromUser($user)
-    {
-        return $this->setIdentifier($user->getAttribute('email'));
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function render()
     {
         $url = sprintf(

@@ -11,8 +11,8 @@ class AvatarManager extends Manager
      */
     protected function createGravatarDriver()
     {
-        $config = $this->app['config']->get('orchestra/avatar');
-        
+        $config = $this->getConfiguration();
+
         return new Provider(new GravatarHandler($config));
     }
 
@@ -24,5 +24,19 @@ class AvatarManager extends Manager
     public function getDefaultDriver()
     {
         return $this->app['config']->get('orchestra/avatar::driver', 'gravatar');
+    }
+
+    /**
+     * Get avatar configuration.
+     *
+     * @return array
+     */
+    protected function getConfiguration()
+    {
+        $config = $this->app['config']->get('orchestra/avatar::config', array());
+
+        unset($config['driver']);
+
+        return $config;
     }
 }
