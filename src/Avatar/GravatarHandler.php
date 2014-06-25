@@ -27,7 +27,7 @@ class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterf
      */
     public function render()
     {
-        return sprintf('%s/%s?s=%d', array(
+        return sprintf('%s/%s?s=%d&r=g', array(
             static::URL,
             $this->getGravatarIdentifier(),
             $this->getGravatarSize(),
