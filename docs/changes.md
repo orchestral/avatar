@@ -8,6 +8,7 @@ title: Avatar Change Log
 ### v2.1.1 {#v2-1-1}
 
 * Fixes configuration is missing when rendering avatar.
+* Move `Orchestra\Avatar\GravatarHandler::setIdentifierFromUser()` to `Orchestra\Avatar\Abstractable\AbstractableHandler`.
 
 ### v2.1.0 {#v2-1-0}
 
