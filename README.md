@@ -1,7 +1,7 @@
-Multiple Avatar Provider for Laravel
+Orchestra Platform 2 Avatar Component
 ==============
 
-`Orchestra\Avatar` provide support for driver based avatar provider for your Laravel application.
+Avatar Component provide support for driver based avatar provider for your Laravel or Orchestra Platform 2 application.
 
 [![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/v/stable.png)](https://packagist.org/packages/orchestra/avatar) 
 [![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads.png)](https://packagist.org/packages/orchestra/avatar) 
@@ -63,6 +63,8 @@ You might also want to add `Orchestra\Avatar\Facade` to class aliases in `app/co
 ## Usage
 
 ```php
+<?php
+
 $user = User::find(1);
 
 $avatar = Avatar::user($user)->render();
