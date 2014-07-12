@@ -1,7 +1,8 @@
 {
 	"name": "orchestra/avatar",
-	"description": "Multiple Avatar Provider for Laravel",
+	"description": "Orchestra Platform 2 Avatar Component",
 	"license": "MIT",
+	"keywords": ["orchestra-platform", "orchestral", "laravel", "avatar", "gravatar"],
 	"authors": [
 		{
 			"name": "Mior Muhammad Zaki",
@@ -24,6 +25,10 @@
 		"illuminate/config": "4.1.*",
 		"illuminate/container": "4.1.*",
 		"illuminate/database": "4.1.*"
+	},
+	"suggest": {
+	    "laravel/framework": "Allow using orchestra/avatar component outside of Orchestra Platform 2",
+	    "orchestra/foundation": "Allow using orchestra/avatar with Orchestra Platform 2"
 	},
 	"extra": {
 		"branch-alias": {
