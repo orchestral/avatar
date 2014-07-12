@@ -1,7 +1,7 @@
-Orchestra Platform 2 Avatar Component
+Avatar Package for Laravel and PHP
 ==============
 
-Avatar Component provide support for driver based avatar provider for your Laravel or Orchestra Platform 2 application.
+Avatar Package provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform 2 application.
 
 [![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/v/stable.png)](https://packagist.org/packages/orchestra/avatar) 
 [![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads.png)](https://packagist.org/packages/orchestra/avatar) 
