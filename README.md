@@ -15,7 +15,7 @@ Avatar Package provide support for driver based avatar provider for your Laravel
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Usage](#usage)
-* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v2-2)
+* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v2-1)
 
 ## Version Compatibility
 
