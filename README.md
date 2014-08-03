@@ -3,11 +3,19 @@ Avatar Package for Laravel and PHP
 
 Avatar Package provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform 2 application.
 
-[![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/v/stable.png)](https://packagist.org/packages/orchestra/avatar) 
-[![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads.png)](https://packagist.org/packages/orchestra/avatar) 
-[![Build Status](https://travis-ci.org/orchestral/avatar.svg?branch=2.2)](https://travis-ci.org/orchestral/avatar) 
-[![Coverage Status](https://coveralls.io/repos/orchestral/avatar/badge.png?branch=2.2)](https://coveralls.io/r/orchestral/avatar?branch=2.2) 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/orchestral/avatar/badges/quality-score.png?b=2.2)](https://scrutinizer-ci.com/g/orchestral/avatar/?branch=2.2) 
+[![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/v/stable.png)](https://packagist.org/packages/orchestra/avatar)
+[![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads.png)](https://packagist.org/packages/orchestra/avatar)
+[![Build Status](https://travis-ci.org/orchestral/avatar.svg?branch=2.2)](https://travis-ci.org/orchestral/avatar)
+[![Coverage Status](https://coveralls.io/repos/orchestral/avatar/badge.png?branch=2.2)](https://coveralls.io/r/orchestral/avatar?branch=2.2)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/orchestral/avatar/badges/quality-score.png?b=2.2)](https://scrutinizer-ci.com/g/orchestral/avatar/?branch=2.2)
+
+## Table of Content
+
+* [Version Compatibility](#compatibility)
+* [Installation](#installation)
+* [Configuration](#configuration)
+* [Usage](#usage)
+* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v2-1)
 
 ## Version Compatibility
 
@@ -19,12 +27,12 @@ Laravel  | Avatar
 ## Installation
 
 To install through composer, simply put the following in your `composer.json` file:
- 
+
 ```json
 {
 	"require": {
 		"orchestra/avatar": "2.2.*"
-	}	
+	}
 }
 ```
 
@@ -38,7 +46,7 @@ You could also simplify the above code by using the following command:
 composer require "orchestra/avatar=2.2.*"
 ```
 
-### Setup
+### Configuration
 
 Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `app/config/app.php`.
 
@@ -54,13 +62,15 @@ You might also want to add `Orchestra\Avatar\Facade` to class aliases in `app/co
 
 ```php
 'aliases' => array(
-	
+
 	// ...
 	'Avatar' => 'Orchestra\Avatar\Facade',
 ),
 ```
 
 ## Usage
+
+You can easily display an avatar by passing a `User` instance.
 
 ```php
 <?php
