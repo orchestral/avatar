@@ -1,5 +1,6 @@
 <?php namespace Orchestra\Avatar;
 
+use Illuminate\Support\Arr;
 use Orchestra\Avatar\Abstractable\AbstractableHandler;
 
 class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterface
@@ -52,6 +53,6 @@ class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterf
     {
         $size = $this->getSize();
 
-        return array_get($this->config, "sizes.{$size}", 'small');
+        return Arr::get($this->config, "sizes.{$size}", 'small');
     }
 }
