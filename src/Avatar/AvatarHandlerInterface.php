@@ -4,34 +4,34 @@ interface AvatarHandlerInterface
 {
     /**
      * @param  string   $identifier
-     * @return AvatarHandlerInterface
+     * @return $this
      */
     public function setIdentifier($identifier);
 
     /**
      * @param  string   $size
-     * @return AvatarHandlerInterface
+     * @return $this
      */
     public function setSize($size);
 
     /**
      * Large size.
      *
-     * @return AvatarHandlerInterface
+     * @return $this
      */
     public function large();
 
     /**
      * Medium size.
      *
-     * @return AvatarHandlerInterface
+     * @return $this
      */
     public function medium();
 
     /**
      * Small size.
      *
-     * @return AvatarHandlerInterface
+     * @return $this
      */
     public function small();
 

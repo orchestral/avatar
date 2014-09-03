@@ -44,7 +44,7 @@ abstract class AbstractableHandler
      *
      * @param  \Illuminate\Database\Eloquent\Model|object   $user
      * @param  string                                       $attribute
-     * @return AbstractableHandler
+     * @return $this
      */
     public function setIdentifierFromUser($user, $attribute = 'email')
     {
@@ -72,7 +72,7 @@ abstract class AbstractableHandler
      * Set user identifier.
      *
      * @param  string   $identifier
-     * @return AbstractableHandler
+     * @return $this
      */
     public function setIdentifier($identifier)
     {
@@ -95,7 +95,7 @@ abstract class AbstractableHandler
      * Set size.
      *
      * @param  string   $size
-     * @return AbstractableHandler
+     * @return $this
      */
     public function setSize($size)
     {
@@ -107,7 +107,7 @@ abstract class AbstractableHandler
     /**
      * Large size.
      *
-     * @return AbstractableHandler
+     * @return $this
      */
     public function large()
     {
@@ -117,7 +117,7 @@ abstract class AbstractableHandler
     /**
      * Medium size.
      *
-     * @return AbstractableHandler
+     * @return $this
      */
     public function medium()
     {
@@ -127,7 +127,7 @@ abstract class AbstractableHandler
     /**
      * Small size.
      *
-     * @return AbstractableHandler
+     * @return $this
      */
     public function small()
     {

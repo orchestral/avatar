@@ -44,7 +44,7 @@ class Provider
     /**
      * Get current handler.
      *
-     * @return \Orchestra\Avatar\AvatarHandlerInterface
+     * @return AvatarHandlerInterface
      */
     public function getHandler()
     {
