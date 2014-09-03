@@ -5,6 +5,10 @@ title: Avatar Change Log
 
 ## Version 2.2 {#v2-2}
 
+### v2.2.2@dev {#v2-2-2}
+
+* Utilize `Illuminate\Support\Arr`.
+
 ### v2.2.1 {#v2-2-1}
 
 * Fixes configuration is missing when rendering avatar.
