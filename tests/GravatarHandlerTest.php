@@ -21,7 +21,7 @@ class GravatarHandlerTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetIdentifierByUserMethod()
     {
-        $user = m::mock('User');
+        $user = m::mock('\Illuminate\Database\Eloquent\Model');
 
         $stub = new GravatarHandler(array());
 
@@ -39,7 +39,7 @@ class GravatarHandlerTest extends \PHPUnit_Framework_TestCase
      */
     public function testRenderMethod()
     {
-        $user = m::mock('User');
+        $user = m::mock('\Illuminate\Database\Eloquent\Model');
         $config = array(
             'sizes' => array(
                 'small'  => '50',
@@ -68,7 +68,7 @@ class GravatarHandlerTest extends \PHPUnit_Framework_TestCase
      */
     public function testRenderMethodWithDefaultUrl()
     {
-        $user = m::mock('User');
+        $user = m::mock('\Illuminate\Database\Eloquent\Model');
         $config = array(
             'sizes' => array(
                 'small'  => '50',

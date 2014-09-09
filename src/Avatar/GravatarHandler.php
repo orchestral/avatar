@@ -27,7 +27,7 @@ class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterf
             $this->getGravatarSize()
         );
 
-        if (! is_null($default = array_get($this->config, 'gravatar.default'))) {
+        if (! is_null($default = Arr::get($this->config, 'gravatar.default'))) {
             $url .= "&d=".urlencode($default);
         }
 
