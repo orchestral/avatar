@@ -1,7 +1,7 @@
 Avatar Package for Laravel and PHP
 ==============
 
-Avatar Package provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform 2 application.
+Avatar Package provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform application.
 
 [![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/v/stable.png)](https://packagist.org/packages/orchestra/avatar)
 [![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads.png)](https://packagist.org/packages/orchestra/avatar)
@@ -15,7 +15,7 @@ Avatar Package provide support for driver based avatar provider for your Laravel
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Usage](#usage)
-* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v2-3)
+* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v3-0)
 
 ## Version Compatibility
 
@@ -23,7 +23,7 @@ Laravel  | Avatar
 :--------|:---------
  4.1.x   | 2.1.x
  4.2.x   | 2.2.x
- 4.3.x   | 2.3.x@dev
+ 5.0.x   | 3.0.x@dev
 
 ## Installation
 
@@ -32,7 +32,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require": {
-		"orchestra/avatar": "2.3.*"
+		"orchestra/avatar": "3.0.*"
 	}
 }
 ```
@@ -44,7 +44,7 @@ And then run `composer install` to fetch the package.
 You could also simplify the above code by using the following command:
 
 ```
-composer require "orchestra/avatar=2.3.*"
+composer require "orchestra/avatar=3.0.*"
 ```
 
 ### Configuration
