@@ -1,9 +1,10 @@
-<?php namespace Orchestra\Avatar;
+<?php namespace Orchestra\Avatar\Handlers;
 
 use Illuminate\Support\Arr;
-use Orchestra\Avatar\Abstractable\AbstractableHandler;
+use Orchestra\Avatar\Handler;
+use Orchestra\Avatar\HandlerInterface;
 
-class GravatarHandler extends AbstractableHandler implements AvatarHandlerInterface
+class Gravatar extends Handler implements HandlerInterface
 {
     /**
      * Service URL.

@@ -2,7 +2,6 @@
 
 use Mockery as m;
 use Illuminate\Container\Container;
-use Orchestra\Avatar\AvatarManager;
 use Orchestra\Avatar\AvatarServiceProvider;
 
 class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
@@ -62,7 +61,8 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
 
         $stub = m::mock('\Orchestra\Avatar\AvatarServiceProvider[package]', array($app));
 
-        $stub->shouldReceive('package')->once()->with('orchestra/avatar', 'orchestra/avatar', realpath(__DIR__.'/../src'))
+        $stub->shouldReceive('package')->once()
+            ->with('orchestra/avatar', 'orchestra/avatar', realpath(__DIR__.'/../src'))
             ->andReturnNull();
 
         $this->assertNull($stub->boot());

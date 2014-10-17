@@ -1,6 +1,7 @@
 <?php namespace Orchestra\Avatar;
 
 use Illuminate\Support\Manager;
+use Orchestra\Avatar\Handlers\Gravatar;
 
 class AvatarManager extends Manager
 {
@@ -13,7 +14,7 @@ class AvatarManager extends Manager
     {
         $config = $this->getConfiguration();
 
-        return new Provider(new GravatarHandler($config));
+        return new Provider(new Gravatar($config));
     }
 
     /**

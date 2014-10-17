@@ -5,16 +5,16 @@ class Provider
     /**
      * Handler instance.
      *
-     * @var AvatarHandlerInterface
+     * @var HandlerInterface
      */
     protected $handler;
 
     /**
      * Construct a new avatar provider.
      *
-     * @param  AvatarHandlerInterface $handler
+     * @param  HandlerInterface $handler
      */
-    public function __construct(AvatarHandlerInterface $handler)
+    public function __construct(HandlerInterface $handler)
     {
         $this->handler = $handler;
     }
@@ -23,7 +23,7 @@ class Provider
      * Make a new avatar by identifier.
      *
      * @param  string   $identifier
-     * @return AvatarHandlerInterface
+     * @return HandlerInterface
      */
     public function make($identifier)
     {
@@ -34,7 +34,7 @@ class Provider
      * Make a new avatar by user object.
      *
      * @param  object   $user
-     * @return AvatarHandlerInterface
+     * @return HandlerInterface
      */
     public function user($user)
     {
@@ -44,7 +44,7 @@ class Provider
     /**
      * Get current handler.
      *
-     * @return AvatarHandlerInterface
+     * @return HandlerInterface
      */
     public function getHandler()
     {

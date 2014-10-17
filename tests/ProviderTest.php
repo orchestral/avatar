@@ -20,7 +20,7 @@ class ProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testMakeMethod()
     {
-        $handler = m::mock('\Orchestra\Avatar\AvatarHandlerInterface');
+        $handler = m::mock('\Orchestra\Avatar\HandlerInterface');
 
         $handler->shouldReceive('setIdentifier')->once()->with('admin@orchestraplatform.com')->andReturnSelf();
 
@@ -37,7 +37,7 @@ class ProviderTest extends \PHPUnit_Framework_TestCase
     public function testUserMethod()
     {
         $user = m::mock('\Illuminate\Database\Eloquent\Model');
-        $handler = m::mock('\Orchestra\Avatar\AvatarHandlerInterface', '\Orchestra\Avatar\Abstractable\AbstractableHandler');
+        $handler = m::mock('\Orchestra\Avatar\HandlerInterface', '\Orchestra\Avatar\Handler');
 
         $handler->shouldReceive('setIdentifierFromUser')->once()->with($user)->andReturnSelf();
 

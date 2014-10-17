@@ -1,6 +1,6 @@
-<?php namespace Orchestra\Avatar\Abstractable;
+<?php namespace Orchestra\Avatar;
 
-abstract class AbstractableHandler
+abstract class Handler
 {
     /**
      * Configuration.

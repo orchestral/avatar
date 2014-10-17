@@ -1,9 +1,9 @@
-<?php namespace Orchestra\Avatar\TestCase;
+<?php namespace Orchestra\Avatar\Handlers\TestCase;
 
 use Mockery as m;
-use Orchestra\Avatar\GravatarHandler;
+use Orchestra\Avatar\Handlers\Gravatar;
 
-class GravatarHandlerTest extends \PHPUnit_Framework_TestCase
+class GravatarTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Teardown the test environment.
@@ -23,7 +23,7 @@ class GravatarHandlerTest extends \PHPUnit_Framework_TestCase
     {
         $user = m::mock('\Illuminate\Database\Eloquent\Model');
 
-        $stub = new GravatarHandler(array());
+        $stub = new Gravatar(array());
 
         $user->shouldReceive('getAttribute')->once()->with('email')->andReturn('admin@orchestraplatform.com');
 
@@ -48,7 +48,7 @@ class GravatarHandlerTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $stub = new GravatarHandler($config);
+        $stub = new Gravatar($config);
 
         $user->shouldReceive('getAttribute')->once()->with('email')->andReturn('admin@orchestraplatform.com');
 
@@ -80,7 +80,7 @@ class GravatarHandlerTest extends \PHPUnit_Framework_TestCase
             ),
         );
 
-        $stub = new GravatarHandler($config);
+        $stub = new Gravatar($config);
 
         $user->shouldReceive('getAttribute')->once()->with('email')->andReturn('admin@orchestraplatform.com');
 

@@ -1,6 +1,6 @@
 <?php namespace Orchestra\Avatar;
 
-interface AvatarHandlerInterface
+interface HandlerInterface
 {
     /**
      * @param  string   $identifier
