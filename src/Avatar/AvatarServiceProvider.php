@@ -1,6 +1,6 @@
 <?php namespace Orchestra\Avatar;
 
-use Illuminate\Support\ServiceProvider;
+use Orchestra\Support\Providers\ServiceProvider;
 
 class AvatarServiceProvider extends ServiceProvider
 {
@@ -9,7 +9,7 @@ class AvatarServiceProvider extends ServiceProvider
      *
      * @var bool
      */
-    protected $defer = false;
+    protected $defer = true;
 
     /**
      * Register the service provider.
@@ -18,7 +18,7 @@ class AvatarServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bindShared('orchestra.avatar', function ($app) {
+        $this->app->singleton('orchestra.avatar', function ($app) {
             return new AvatarManager($app);
         });
     }
@@ -32,7 +32,7 @@ class AvatarServiceProvider extends ServiceProvider
     {
         $path = realpath(__DIR__.'/../');
 
-        $this->package('orchestra/avatar', 'orchestra/avatar', $path);
+        $this->addConfigComponent('orchestra/avatar', 'orchestra/avatar', $path.'/config');
     }
 
     /**
@@ -42,6 +42,6 @@ class AvatarServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return array('orchestra.avatar');
+        return ['orchestra.avatar'];
     }
 }

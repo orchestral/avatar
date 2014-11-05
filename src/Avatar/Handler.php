@@ -7,7 +7,7 @@ abstract class Handler
      *
      * @var array
      */
-    protected $config = array();
+    protected $config = [];
 
     /**
      * Name of the handler.

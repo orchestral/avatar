@@ -1,7 +1,6 @@
 <?php namespace Orchestra\Avatar\TestCase;
 
 use Mockery as m;
-use Illuminate\Container\Container;
 use Orchestra\Avatar\AvatarServiceProvider;
 
 class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
@@ -15,17 +14,16 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test Orchestra\Avatar\AvatarServiceProvider is not
-     * a deferred service provider.
+     * Test Orchestra\Avatar\AvatarServiceProvider is a deferred service
+     * provider.
      *
      * @test
      */
-    public function testIsNotDeferredService()
+    public function testIsDeferredService()
     {
-        $app  = new Container;
-        $stub = new AvatarServiceProvider($app);
+        $stub = new AvatarServiceProvider(null);
 
-        $this->assertFalse($stub->isDeferred());
+        $this->assertTrue($stub->isDeferred());
     }
 
     /**
@@ -36,9 +34,9 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testRegisterMethod()
     {
-        $app = m::mock('\Illuminate\Container\Container[bindShared]');
+        $app = m::mock('\Illuminate\Container\Container[singleton]');
 
-        $app->shouldReceive('bindShared')->once()->with('orchestra.avatar', m::type('Closure'))
+        $app->shouldReceive('singleton')->once()->with('orchestra.avatar', m::type('Closure'))
             ->andReturnUsing(function ($n, $c) use ($app) {
                 $app[$n] = $c($app);
             });
@@ -57,12 +55,10 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testBootMethod()
     {
-        $app = new Container;
+        $stub = m::mock('\Orchestra\Avatar\AvatarServiceProvider[addConfigComponent]', array(null));
 
-        $stub = m::mock('\Orchestra\Avatar\AvatarServiceProvider[package]', array($app));
-
-        $stub->shouldReceive('package')->once()
-            ->with('orchestra/avatar', 'orchestra/avatar', realpath(__DIR__.'/../src'))
+        $stub->shouldReceive('addConfigComponent')->once()
+            ->with('orchestra/avatar', 'orchestra/avatar', realpath(__DIR__.'/../src/config'))
             ->andReturnNull();
 
         $this->assertNull($stub->boot());
@@ -76,8 +72,7 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testProvidesMethod()
     {
-        $app  = new Container;
-        $stub = new AvatarServiceProvider($app);
+        $stub = new AvatarServiceProvider(null);
 
         $this->assertContains('orchestra.avatar', $stub->provides());
     }

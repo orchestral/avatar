@@ -1,7 +1,6 @@
 <?php namespace Orchestra\Avatar\TestCase;
 
 use Mockery as m;
-use Illuminate\Container\Container;
 use Orchestra\Avatar\AvatarManager;
 
 class AvatarManagerTest extends \PHPUnit_Framework_TestCase
@@ -22,8 +21,7 @@ class AvatarManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetDefaultDriverMethod()
     {
-        $app = new Container;
-        $app['config'] = $config = m::mock('\Illuminate\Contracts\Config\Config');
+        $app['config'] = $config = m::mock('\Illuminate\Contracts\Config\Repository');
 
         $config->shouldReceive('get')->once()->with('orchestra/avatar::driver', 'gravatar')
             ->andReturn('gravatar');
@@ -41,8 +39,7 @@ class AvatarManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function testCreateGravatarDriverMethod()
     {
-        $app = new Container;
-        $app['config'] = $config = m::mock('\Illuminate\Contracts\Config\Config');
+        $app['config'] = $config = m::mock('\Illuminate\Contracts\Config\Repository');
 
         $config->shouldReceive('get')->once()->with('orchestra/avatar::config', array())->andReturn(array());
 
