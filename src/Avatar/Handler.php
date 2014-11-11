@@ -71,7 +71,7 @@ abstract class Handler
     /**
      * Set user identifier.
      *
-     * @param  string   $identifier
+     * @param  string  $identifier
      * @return $this
      */
     public function setIdentifier($identifier)
@@ -94,7 +94,7 @@ abstract class Handler
     /**
      * Set size.
      *
-     * @param  string   $size
+     * @param  string  $size
      * @return $this
      */
     public function setSize($size)
