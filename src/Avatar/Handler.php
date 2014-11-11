@@ -32,7 +32,7 @@ abstract class Handler
     /**
      * Construct a new Avatar handler.
      *
-     * @param array $config
+     * @param array  $config
      */
     public function __construct(array $config)
     {
@@ -42,8 +42,8 @@ abstract class Handler
     /**
      * Set identifier from user object.
      *
-     * @param  \Illuminate\Database\Eloquent\Model|object   $user
-     * @param  string                                       $attribute
+     * @param  \Illuminate\Database\Eloquent\Model|object  $user
+     * @param  string  $attribute
      * @return $this
      */
     public function setIdentifierFromUser($user, $attribute = 'email')

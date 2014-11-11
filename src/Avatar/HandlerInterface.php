@@ -3,13 +3,13 @@
 interface HandlerInterface
 {
     /**
-     * @param  string   $identifier
+     * @param  string  $identifier
      * @return $this
      */
     public function setIdentifier($identifier);
 
     /**
-     * @param  string   $size
+     * @param  string  $size
      * @return $this
      */
     public function setSize($size);

@@ -5,14 +5,14 @@ class Provider
     /**
      * Handler instance.
      *
-     * @var HandlerInterface
+     * @var \Orchestra\Avatar\HandlerInterface
      */
     protected $handler;
 
     /**
      * Construct a new avatar provider.
      *
-     * @param  HandlerInterface $handler
+     * @param  \Orchestra\AvatarHandlerInterface  $handler
      */
     public function __construct(HandlerInterface $handler)
     {
@@ -22,8 +22,8 @@ class Provider
     /**
      * Make a new avatar by identifier.
      *
-     * @param  string   $identifier
-     * @return HandlerInterface
+     * @param  string  $identifier
+     * @return \Orchestra\AvatarHandlerInterface
      */
     public function make($identifier)
     {
@@ -33,8 +33,8 @@ class Provider
     /**
      * Make a new avatar by user object.
      *
-     * @param  object   $user
-     * @return HandlerInterface
+     * @param  object  $user
+     * @return \Orchestra\Avatar\HandlerInterface
      */
     public function user($user)
     {
@@ -44,7 +44,7 @@ class Provider
     /**
      * Get current handler.
      *
-     * @return HandlerInterface
+     * @return \Orchestra\Avatar\HandlerInterface
      */
     public function getHandler()
     {
