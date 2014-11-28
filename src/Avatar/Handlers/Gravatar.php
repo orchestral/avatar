@@ -54,6 +54,6 @@ class Gravatar extends Handler implements HandlerInterface
     {
         $size = $this->getSize();
 
-        return Arr::get($this->config, "sizes.{$size}", 'small');
+        return Arr::get($this->config, "sizes.{$size}", (is_int($size) ? $size : 'small'));
     }
 }
