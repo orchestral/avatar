@@ -59,13 +59,13 @@ Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `app/config/app
 ),
 ```
 
-You might also want to add `Orchestra\Avatar\Facade` to class aliases in `app/config/app.php`:
+You might also want to add `Orchestra\Support\Facade\Avatar` to class aliases in `app/config/app.php`:
 
 ```php
 'aliases' => array(
 
 	// ...
-	'Avatar' => 'Orchestra\Avatar\Facade',
+	'Avatar' => 'Orchestra\Support\Facade\Avatar',
 ),
 ```
 
