@@ -1,13 +1,14 @@
-Avatar Package for Laravel and PHP
+Avatar Component for Orchestra Platform
 ==============
 
-Avatar Package provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform application.
+Avatar Component provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform application.
 
-[![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/v/stable.png)](https://packagist.org/packages/orchestra/avatar)
-[![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads.png)](https://packagist.org/packages/orchestra/avatar)
-[![Build Status](https://travis-ci.org/orchestral/avatar.svg?branch=master)](https://travis-ci.org/orchestral/avatar)
-[![Coverage Status](https://coveralls.io/repos/orchestral/avatar/badge.png?branch=master)](https://coveralls.io/r/orchestral/avatar?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/orchestral/avatar/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/orchestral/avatar/?branch=master)
+[![Latest Stable Version](https://img.shields.io/github/release/orchestral/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
+[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
+[![MIT License](https://img.shields.io/packagist/l/orchestra/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
+[![Build Status](https://img.shields.io/travis/orchestral/avatar/master.svg?style=flat)](https://travis-ci.org/orchestral/avatar)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/master.svg?style=flat)](https://coveralls.io/r/orchestral/avatar?branch=master)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/master.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/avatar/)
 
 ## Table of Content
 

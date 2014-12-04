@@ -1,6 +1,6 @@
 {
 	"name": "orchestra/avatar",
-	"description": "Avatar Package for Laravel and PHP",
+	"description": "Avatar Component for Orchestra Platform",
 	"license": "MIT",
 	"keywords": ["orchestra-platform", "orchestral", "laravel", "avatar", "gravatar"],
 	"authors": [
