@@ -12,7 +12,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"Orchestra\\Avatar\\": "src/Avatar/"
+			"Orchestra\\Avatar\\": "src/"
 		}
 	},
 	"require": {

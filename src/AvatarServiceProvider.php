@@ -30,7 +30,7 @@ class AvatarServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $path = realpath(__DIR__.'/../');
+        $path = realpath(__DIR__.'/../resources');
 
         $this->addConfigComponent('orchestra/avatar', 'orchestra/avatar', $path.'/config');
     }
