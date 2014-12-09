@@ -58,7 +58,7 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
         $stub = m::mock('\Orchestra\Avatar\AvatarServiceProvider[addConfigComponent]', array(null));
 
         $stub->shouldReceive('addConfigComponent')->once()
-            ->with('orchestra/avatar', 'orchestra/avatar', realpath(__DIR__.'/../src/config'))
+            ->with('orchestra/avatar', 'orchestra/avatar', realpath(__DIR__.'/../resources/config'))
             ->andReturnNull();
 
         $this->assertNull($stub->boot());
