@@ -3,6 +3,15 @@ title: Avatar Change Log
 
 ---
 
+## Version 3.0 {#v3-0}
+
+### v3.0.0 {#v3-0-0}
+
+* Add support for Laravel Framework v5.0.
+* Simplify PSR-2 path.
+* Rename `Orchestra\Avatar\GravatarHandler` to `Orchestra\Avatar\Handlers\Gravatar`.
+* Rename `Orchestra\Avatar\Abstractable\AbstractableHandler` to `Orchestra\Avatar\Handler`.
+
 ## Version 2.2 {#v2-2}
 
 ### v2.2.2@dev {#v2-2-2}

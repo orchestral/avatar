@@ -6,9 +6,9 @@ Avatar Component provide support for driver based avatar provider for your Larav
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
 [![MIT License](https://img.shields.io/packagist/l/orchestra/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
-[![Build Status](https://img.shields.io/travis/orchestral/avatar/master.svg?style=flat)](https://travis-ci.org/orchestral/avatar)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/master.svg?style=flat)](https://coveralls.io/r/orchestral/avatar?branch=master)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/master.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/avatar/)
+[![Build Status](https://img.shields.io/travis/orchestral/avatar/3.0.svg?style=flat)](https://travis-ci.org/orchestral/avatar)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/3.0.svg?style=flat)](https://coveralls.io/r/orchestral/avatar?branch=3.0)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/3.0.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/avatar/)
 
 ## Table of Content
 
@@ -24,7 +24,7 @@ Laravel  | Avatar
 :--------|:---------
  4.1.x   | 2.1.x
  4.2.x   | 2.2.x
- 5.0.x   | 3.0.x@dev
+ 5.0.x   | 3.0.x
 
 ## Installation
 
@@ -53,23 +53,23 @@ composer require "orchestra/avatar=3.0.*"
 Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `app/config/app.php`.
 
 ```php
-'providers' => array(
+'providers' => [
 
 	// ...
 
 	'Orchestra\Avatar\AvatarServiceProvider',
-),
+],
 ```
 
 You might also want to add `Orchestra\Support\Facade\Avatar` to class aliases in `app/config/app.php`:
 
 ```php
-'aliases' => array(
+'aliases' => [
 
 	// ...
 
     'Avatar' => 'Orchestra\Support\Facade\Avatar',
-),
+],
 ```
 
 ## Usage
