@@ -51,7 +51,7 @@ composer require "orchestra/avatar=3.1.*"
 
 ### Configuration
 
-Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `app/config/app.php`.
+Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `config/app.php`.
 
 ```php
 'providers' => [
@@ -62,7 +62,7 @@ Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `app/config/app
 ],
 ```
 
-You might also want to add `Orchestra\Support\Facade\Avatar` to class aliases in `app/config/app.php`:
+You might also want to add `Orchestra\Support\Facade\Avatar` to class aliases in `config/app.php`:
 
 ```php
 'aliases' => [
