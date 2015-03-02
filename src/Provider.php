@@ -23,6 +23,7 @@ class Provider
      * Make a new avatar by identifier.
      *
      * @param  string  $identifier
+     *
      * @return \Orchestra\AvatarHandlerInterface
      */
     public function make($identifier)
@@ -34,6 +35,7 @@ class Provider
      * Make a new avatar by user object.
      *
      * @param  object  $user
+     *
      * @return \Orchestra\Avatar\HandlerInterface
      */
     public function user($user)

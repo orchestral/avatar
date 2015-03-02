@@ -24,7 +24,6 @@ abstract class Handler
     protected $identifier;
 
     /**
-     *
      * @var string
      */
     protected $size;
@@ -44,6 +43,7 @@ abstract class Handler
      *
      * @param  \Illuminate\Database\Eloquent\Model|object  $user
      * @param  string  $attribute
+     *
      * @return $this
      */
     public function setIdentifierFromUser($user, $attribute = 'email')
@@ -72,6 +72,7 @@ abstract class Handler
      * Set user identifier.
      *
      * @param  string  $identifier
+     *
      * @return $this
      */
     public function setIdentifier($identifier)
@@ -95,6 +96,7 @@ abstract class Handler
      * Set size.
      *
      * @param  string  $size
+     *
      * @return $this
      */
     public function setSize($size)
