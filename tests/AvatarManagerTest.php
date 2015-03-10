@@ -41,7 +41,7 @@ class AvatarManagerTest extends \PHPUnit_Framework_TestCase
     {
         $app['config'] = $config = m::mock('\Illuminate\Contracts\Config\Repository');
 
-        $config->shouldReceive('get')->once()->with('orchestra/avatar::config', array())->andReturn(array());
+        $config->shouldReceive('get')->once()->with('orchestra/avatar::config', [])->andReturn([]);
 
         $stub = new AvatarManager($app);
 
@@ -49,6 +49,5 @@ class AvatarManagerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf('\Orchestra\Avatar\Provider', $gravatar);
         $this->assertInstanceOf('\Orchestra\Avatar\Handlers\Gravatar', $gravatar->getHandler());
-
     }
 }

@@ -23,7 +23,7 @@ class GravatarTest extends \PHPUnit_Framework_TestCase
     {
         $user = m::mock('\Illuminate\Database\Eloquent\Model');
 
-        $stub = new Gravatar(array());
+        $stub = new Gravatar([]);
 
         $user->shouldReceive('getAttribute')->once()->with('email')->andReturn('admin@orchestraplatform.com');
 
@@ -39,14 +39,14 @@ class GravatarTest extends \PHPUnit_Framework_TestCase
      */
     public function testRenderMethod()
     {
-        $user = m::mock('\Illuminate\Database\Eloquent\Model');
-        $config = array(
-            'sizes' => array(
+        $user   = m::mock('\Illuminate\Database\Eloquent\Model');
+        $config = [
+            'sizes' => [
                 'small'  => '50',
                 'medium' => '100',
                 'large'  => '150',
-            )
-        );
+            ],
+        ];
 
         $stub = new Gravatar($config);
 
@@ -68,17 +68,17 @@ class GravatarTest extends \PHPUnit_Framework_TestCase
      */
     public function testRenderMethodWithDefaultUrl()
     {
-        $user = m::mock('\Illuminate\Database\Eloquent\Model');
-        $config = array(
-            'sizes' => array(
+        $user   = m::mock('\Illuminate\Database\Eloquent\Model');
+        $config = [
+            'sizes' => [
                 'small'  => '50',
                 'medium' => '100',
                 'large'  => '150',
-            ),
-            'gravatar' => array(
+            ],
+            'gravatar' => [
                 'default' => 'http://foobar.com/images.jpg',
-            ),
-        );
+            ],
+        ];
 
         $stub = new Gravatar($config);
 
