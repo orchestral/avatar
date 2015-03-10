@@ -36,7 +36,7 @@ class ProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testUserMethod()
     {
-        $user = m::mock('\Illuminate\Database\Eloquent\Model');
+        $user    = m::mock('\Illuminate\Database\Eloquent\Model');
         $handler = m::mock('\Orchestra\Avatar\HandlerInterface', '\Orchestra\Avatar\Handler');
 
         $handler->shouldReceive('setIdentifierFromUser')->once()->with($user)->andReturnSelf();
