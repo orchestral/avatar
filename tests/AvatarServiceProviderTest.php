@@ -35,11 +35,14 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
     public function testRegisterMethod()
     {
         $app = m::mock('\Illuminate\Container\Container[singleton]');
+        $app['config'] = $config = m::mock('\Illuminate\Contracts\Config\Repository', '\ArrayAccess');
 
         $app->shouldReceive('singleton')->once()->with('orchestra.avatar', m::type('Closure'))
-            ->andReturnUsing(function ($n, $c) use ($app) {
-                $app[$n] = $c($app);
-            });
+                ->andReturnUsing(function ($n, $c) use ($app) {
+                    $app[$n] = $c($app);
+                });
+
+        $config->shouldReceive('offsetGet')->once()->with('orchestra.avatar')->andReturn([]);
 
         $stub = new AvatarServiceProvider($app);
 
@@ -55,11 +58,15 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testBootMethod()
     {
-        $stub = m::mock('\Orchestra\Avatar\AvatarServiceProvider[addConfigComponent]', [null]);
+        $stub = m::mock('\Orchestra\Avatar\AvatarServiceProvider[addConfigComponent,bootUsingLaravel]', [null])
+                    ->shouldAllowMockingProtectedMethods();
 
         $stub->shouldReceive('addConfigComponent')->once()
-            ->with('orchestra/avatar', 'orchestra/avatar', realpath(__DIR__.'/../resources/config'))
-            ->andReturnNull();
+                ->with('orchestra/avatar', 'orchestra/avatar', realpath(__DIR__.'/../resources/config'))
+                ->andReturnNull()
+            ->shouldReceive('bootUsingLaravel')->once()
+                ->with(realpath(__DIR__.'/../resources'))
+                ->andReturnNull();
 
         $this->assertNull($stub->boot());
     }
