@@ -7,7 +7,7 @@ title: Avatar Change Log
 
 ### v3.0.1 {#v3-0-1}
 
-* Add support for Laravel 5 configuration.
+* Add fallback support to Laravel 5 configuration.
 
 ### v3.0.0 {#v3-0-0}
 
