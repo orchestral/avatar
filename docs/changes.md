@@ -5,6 +5,10 @@ title: Avatar Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.1 {#v3-0-1}
+
+* Add support for Laravel 5 configuration.
+
 ### v3.0.0 {#v3-0-0}
 
 * Update support to Laravel Framework v5.0.
