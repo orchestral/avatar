@@ -19,7 +19,12 @@ class AvatarServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('orchestra.avatar', function ($app) {
-            return new AvatarManager($app);
+            $manager = new AvatarManager($app);
+            $namespace = $this->hasPackageRepository() ? 'orchestra/avatar::' : 'orchestra.avatar';
+
+            $manager->setConfig($app['config'][$namespace]);
+
+            return $manager;
         });
     }
 
@@ -33,6 +38,26 @@ class AvatarServiceProvider extends ServiceProvider
         $path = realpath(__DIR__.'/../resources');
 
         $this->addConfigComponent('orchestra/avatar', 'orchestra/avatar', $path.'/config');
+
+        if (! $this->hasPackageRepository()) {
+            $this->bootUsingLaravel($path);
+        }
+    }
+
+    /**
+     * Boot under Laravel setup.
+     *
+     * @param  string  $path
+     *
+     * @return void
+     */
+    protected function bootUsingLaravel($path)
+    {
+        $this->mergeConfigFrom("{$path}/config/config.php", 'orchestra.avatar');
+
+        $this->publishes([
+            "{$path}/config/config.php" => config_path('orchestra/avatar.php'),
+        ]);
     }
 
     /**

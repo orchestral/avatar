@@ -1,10 +1,18 @@
 <?php namespace Orchestra\Avatar;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Manager;
 use Orchestra\Avatar\Handlers\Gravatar;
 
 class AvatarManager extends Manager
 {
+    /**
+     * Configuration values.
+     *
+     * @var array
+     */
+    protected $config = [];
+
     /**
      * Get Gravatar driver.
      *
@@ -24,7 +32,43 @@ class AvatarManager extends Manager
      */
     public function getDefaultDriver()
     {
-        return $this->app['config']->get('orchestra/avatar::driver', 'gravatar');
+        return Arr::get($this->config, 'driver', 'gravatar');
+    }
+
+    /**
+     * Set the default driver.
+     *
+     * @param  string  $name
+     *
+     * @return void
+     */
+    public function setDefaultDriver($name)
+    {
+        $this->config['driver'] = $name;
+    }
+
+    /**
+     * Get configuration values.
+     *
+     * @return array
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
+    /**
+     * Set configuration.
+     *
+     * @param  array  $config
+     *
+     * @return $this
+     */
+    public function setConfig($config)
+    {
+        $this->config = $config;
+
+        return $this;
     }
 
     /**
@@ -34,10 +78,6 @@ class AvatarManager extends Manager
      */
     protected function getConfiguration()
     {
-        $config = $this->app['config']->get('orchestra/avatar::config', []);
-
-        unset($config['driver']);
-
-        return $config;
+        return Arr::except($this->config, 'driver');
     }
 }
