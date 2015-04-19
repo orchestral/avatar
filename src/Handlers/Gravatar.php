@@ -29,7 +29,7 @@ class Gravatar extends Handler implements HandlerInterface
         );
 
         if (! is_null($default = Arr::get($this->config, 'gravatar.default'))) {
-            $url .= "&d=".urlencode($default);
+            $url .= '&d='.urlencode($default);
         }
 
         return $url;
