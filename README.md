@@ -6,9 +6,9 @@ Avatar Component provide support for driver based avatar provider for your Larav
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
 [![MIT License](https://img.shields.io/packagist/l/orchestra/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
-[![Build Status](https://img.shields.io/travis/orchestral/avatar/3.1.svg?style=flat)](https://travis-ci.org/orchestral/avatar)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/3.1.svg?style=flat)](https://coveralls.io/r/orchestral/avatar?branch=3.1)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/3.1.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/avatar/)
+[![Build Status](https://img.shields.io/travis/orchestral/avatar/master.svg?style=flat)](https://travis-ci.org/orchestral/avatar)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/master.svg?style=flat)](https://coveralls.io/r/orchestral/avatar?branch=master)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/master.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/avatar/)
 
 ## Table of Content
 
