@@ -22,7 +22,7 @@ class AvatarServiceProvider extends ServiceProvider
             $manager = new AvatarManager($app);
             $namespace = $this->hasPackageRepository() ? 'orchestra/avatar::' : 'orchestra.avatar';
 
-            $manager->setConfig($app['config'][$namespace]);
+            $manager->setConfig($app->make('config')->get($namespace));
 
             return $manager;
         });
