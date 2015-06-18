@@ -1,6 +1,7 @@
 <?php namespace Orchestra\Avatar\TestCase;
 
 use Mockery as m;
+use Illuminate\Container\Container;
 use Orchestra\Avatar\AvatarServiceProvider;
 
 class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
@@ -34,15 +35,12 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testRegisterMethod()
     {
-        $app = m::mock('\Illuminate\Container\Container[singleton]');
-        $app['config'] = $config = m::mock('\Illuminate\Contracts\Config\Repository', '\ArrayAccess');
+        $app = new Container();
+        $config = m::mock('\Illuminate\Contracts\Config\Repository', '\ArrayAccess');
 
-        $app->shouldReceive('singleton')->once()->with('orchestra.avatar', m::type('Closure'))
-                ->andReturnUsing(function ($n, $c) use ($app) {
-                    $app[$n] = $c($app);
-                });
+        $app->instance('config', $config);
 
-        $config->shouldReceive('offsetGet')->once()->with('orchestra.avatar')->andReturn([]);
+        $config->shouldReceive('get')->once()->with('orchestra.avatar')->andReturn([]);
 
         $stub = new AvatarServiceProvider($app);
 
@@ -58,7 +56,12 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testBootMethod()
     {
-        $stub = m::mock('\Orchestra\Avatar\AvatarServiceProvider[addConfigComponent,bootUsingLaravel]', [null])
+        $app  = new Container();
+        $config = m::mock('\Illuminate\Contracts\Config\Repository', '\ArrayAccess');
+
+        $app->instance('config', $config);
+
+        $stub = m::mock('\Orchestra\Avatar\AvatarServiceProvider[addConfigComponent,bootUsingLaravel]', [$app])
                     ->shouldAllowMockingProtectedMethods();
 
         $stub->shouldReceive('addConfigComponent')->once()
