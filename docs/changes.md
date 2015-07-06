@@ -15,6 +15,10 @@ title: Avatar Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.2 {#v3-0-2}
+
+* Use "protocol-less" URL.
+
 ### v3.0.1 {#v3-0-1}
 
 * Add fallback support to Laravel 5 configuration.
