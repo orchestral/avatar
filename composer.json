@@ -1,38 +1,38 @@
 {
-	"name": "orchestra/avatar",
-	"description": "Avatar Component for Orchestra Platform",
-	"keywords": ["orchestra-platform", "orchestral", "laravel", "avatar", "gravatar"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Mior Muhammad Zaki",
-			"email": "crynobone@gmail.com",
-			"homepage": "https://github.com/crynobone"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"Orchestra\\Avatar\\": "src/"
-		}
-	},
-	"require": {
-		"php": ">=5.4.0",
-		"orchestra/support-facades": "3.0.*",
-		"orchestra/support-providers": "^3.0.2"
-	},
-	"require-dev": {
-		"mockery/mockery": "^0.9.1",
-		"illuminate/container": "5.0.*",
-		"illuminate/database": "5.0.*"
-	},
-	"suggest": {
-	    "laravel/framework": "Allow using orchestra/avatar component outside of Orchestra Platform (~5.0).",
-	    "orchestra/foundation": "Allow using orchestra/avatar with Orchestra Platform (~3.0)."
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "3.2-dev"
-		}
-	},
-	"minimum-stability": "dev"
+    "name": "orchestra/avatar",
+    "description": "Avatar Component for Orchestra Platform",
+    "keywords": ["orchestra-platform", "orchestral", "laravel", "avatar", "gravatar"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Avatar\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "orchestra/support-facades": "3.0.*",
+        "orchestra/support-providers": "^3.0.2"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.1",
+        "illuminate/container": "5.0.*",
+        "illuminate/database": "5.0.*"
+    },
+    "suggest": {
+        "laravel/framework": "Allow using orchestra/avatar component outside of Orchestra Platform (~5.0).",
+        "orchestra/foundation": "Allow using orchestra/avatar with Orchestra Platform (~3.0)."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.2-dev"
+        }
+    },
+    "minimum-stability": "dev"
 }
