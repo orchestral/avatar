@@ -9,7 +9,7 @@ class Gravatar extends Handler implements HandlerInterface
     /**
      * Service URL.
      */
-    const URL = 'http://www.gravatar.com/avatar';
+    const URL = '//www.gravatar.com/avatar';
 
     /**
      * {@inheritdoc}

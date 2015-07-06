@@ -46,9 +46,7 @@ And then run `composer install` to fetch the package.
 
 You could also simplify the above code by using the following command:
 
-```
-composer require "orchestra/avatar=~3.0"
-```
+    composer require "orchestra/avatar=~3.0"
 
 ### Configuration
 
@@ -59,7 +57,7 @@ Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `config/app.php
 
 	// ...
 
-	'Orchestra\Avatar\AvatarServiceProvider',
+	Orchestra\Avatar\AvatarServiceProvider::class,
 ],
 ```
 
@@ -70,7 +68,7 @@ You might also want to add `Orchestra\Support\Facade\Avatar` to class aliases in
 
 	// ...
 
-    'Avatar' => 'Orchestra\Support\Facade\Avatar',
+    'Avatar' => Orchestra\Support\Facade\Avatar::class,
 ],
 ```
 
