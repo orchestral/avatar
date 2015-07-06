@@ -35,11 +35,10 @@ class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testRegisterMethod()
     {
-        $app = new Container();
+        $app = m::mock('\Illuminate\Container\Container', '\Illuminate\Contracts\Foundation\Application[make]')->makePartial();
         $config = m::mock('\Illuminate\Contracts\Config\Repository', '\ArrayAccess');
 
-        $app->instance('config', $config);
-
+        $app->shouldReceive('make')->twice()->with('config')->andReturn($config);
         $config->shouldReceive('get')->once()->with('orchestra.avatar')->andReturn([]);
 
         $stub = new AvatarServiceProvider($app);

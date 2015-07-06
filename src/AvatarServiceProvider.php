@@ -1,5 +1,6 @@
 <?php namespace Orchestra\Avatar;
 
+use Illuminate\Contracts\Foundation\Application;
 use Orchestra\Support\Providers\ServiceProvider;
 
 class AvatarServiceProvider extends ServiceProvider
@@ -18,7 +19,7 @@ class AvatarServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('orchestra.avatar', function ($app) {
+        $this->app->singleton('orchestra.avatar', function (Application $app) {
             $manager = new AvatarManager($app);
             $namespace = $this->hasPackageRepository() ? 'orchestra/avatar::' : 'orchestra.avatar';
 
