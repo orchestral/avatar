@@ -1,14 +1,16 @@
 Avatar Component for Orchestra Platform
 ==============
 
+[![Join the chat at https://gitter.im/orchestral/platform/components](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/orchestral/platform/components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Avatar Component provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform application.
 
-[![Latest Stable Version](https://img.shields.io/github/release/orchestral/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
-[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
-[![MIT License](https://img.shields.io/packagist/l/orchestra/avatar.svg?style=flat)](https://packagist.org/packages/orchestra/avatar)
-[![Build Status](https://img.shields.io/travis/orchestral/avatar/master.svg?style=flat)](https://travis-ci.org/orchestral/avatar)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/master.svg?style=flat)](https://coveralls.io/r/orchestral/avatar?branch=master)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/master.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/avatar/)
+[![Latest Stable Version](https://img.shields.io/github/release/orchestral/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
+[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
+[![MIT License](https://img.shields.io/packagist/l/orchestra/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
+[![Build Status](https://img.shields.io/travis/orchestral/avatar/master.svg?style=flat-square)](https://travis-ci.org/orchestral/avatar)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/master.svg?style=flat-square)](https://coveralls.io/r/orchestral/avatar?branch=master)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/avatar/)
 
 ## Table of Content
 
