@@ -18,7 +18,7 @@ Avatar Component provide support for driver based avatar provider for your Larav
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Usage](#usage)
-* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v3-1)
+* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v3-2)
 
 ## Version Compatibility
 
