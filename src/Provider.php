@@ -38,8 +38,11 @@ class Provider
      *
      * @return \Orchestra\Avatar\HandlerInterface
      */
-    public function user($user)
+    public function user($user = null)
     {
+        if (empty($user)) {
+            $user = auth()->user();
+        }
         return $this->handler->setIdentifierFromUser($user);
     }
 
