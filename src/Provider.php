@@ -1,20 +1,22 @@
 <?php namespace Orchestra\Avatar;
 
+use Orchestra\Avatar\Contracts\Handler as HandlerContract;
+
 class Provider
 {
     /**
      * Handler instance.
      *
-     * @var \Orchestra\Avatar\HandlerInterface
+     * @var \Orchestra\Avatar\Contracts\Handler
      */
     protected $handler;
 
     /**
      * Construct a new avatar provider.
      *
-     * @param  \Orchestra\AvatarHandlerInterface  $handler
+     * @param  \Orchestra\Avatar\Contracts\Handler  $handler
      */
-    public function __construct(HandlerInterface $handler)
+    public function __construct(HandlerContract $handler)
     {
         $this->handler = $handler;
     }
@@ -24,7 +26,7 @@ class Provider
      *
      * @param  string  $identifier
      *
-     * @return \Orchestra\AvatarHandlerInterface
+     * @return \Orchestra\Avatar\Contracts\Handler
      */
     public function make($identifier)
     {
@@ -36,7 +38,7 @@ class Provider
      *
      * @param  object  $user
      *
-     * @return \Orchestra\Avatar\HandlerInterface
+     * @return \Orchestra\Avatar\Contracts\Handler
      */
     public function user($user)
     {
@@ -46,7 +48,7 @@ class Provider
     /**
      * Get current handler.
      *
-     * @return \Orchestra\Avatar\HandlerInterface
+     * @return \Orchestra\Avatar\Contracts\Handler
      */
     public function getHandler()
     {
