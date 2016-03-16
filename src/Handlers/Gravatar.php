@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Arr;
 use Orchestra\Avatar\Handler;
-use Orchestra\Avatar\HandlerInterface;
+use Orchestra\Avatar\Contracts\Handler as HandlerContract;
 
-class Gravatar extends Handler implements HandlerInterface
+class Gravatar extends Handler implements HandlerContract
 {
     /**
      * Service URL.
