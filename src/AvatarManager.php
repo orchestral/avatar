@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Avatar;
+<?php
+
+namespace Orchestra\Avatar;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Manager;

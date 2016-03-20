@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Avatar;
+<?php
+
+namespace Orchestra\Avatar;
 
 use Illuminate\Contracts\Foundation\Application;
 use Orchestra\Support\Providers\ServiceProvider;

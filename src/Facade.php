@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Avatar;
+<?php
+
+namespace Orchestra\Avatar;
 
 class Facade extends \Illuminate\Support\Facades\Facade
 {
