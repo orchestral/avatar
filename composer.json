@@ -22,8 +22,8 @@
     },
     "require-dev": {
         "mockery/mockery": "^0.9.1",
-        "illuminate/container": "~5.3.0",
-        "illuminate/database": "~5.3.0"
+        "illuminate/container": "~5.4.0",
+        "illuminate/database": "~5.4.0"
     },
     "suggest": {
         "laravel/framework": "Allow using orchestra/avatar component outside of Orchestra Platform (~5.4).",
