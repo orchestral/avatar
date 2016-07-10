@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Avatar\Contracts;
+<?php
+
+namespace Orchestra\Avatar\Contracts;
 
 interface Handler
 {
