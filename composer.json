@@ -25,14 +25,13 @@
         "illuminate/container": "~5.4.0",
         "illuminate/database": "~5.4.0"
     },
-    "suggest": {
-        "laravel/framework": "Allow using orchestra/avatar component outside of Orchestra Platform (~5.4).",
-        "orchestra/foundation": "Allow using orchestra/avatar with Orchestra Platform (~3.4)."
-    },
     "extra": {
         "branch-alias": {
             "dev-master": "3.4-dev"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "minimum-stability": "dev"
 }
