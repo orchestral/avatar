@@ -17,17 +17,17 @@
     },
     "require": {
         "php": ">=7.0",
-        "orchestra/support-facades": "~3.4.0",
-        "orchestra/support-providers": "~3.4.0"
+        "orchestra/support-facades": "~3.5.0",
+        "orchestra/support-providers": "~3.5.0"
     },
     "require-dev": {
-        "mockery/mockery": "^0.9.1",
-        "illuminate/container": "~5.4.0",
-        "illuminate/database": "~5.4.0"
+        "mockery/mockery": "^0.9.4",
+        "illuminate/container": "~5.5.0",
+        "illuminate/database": "~5.5.0"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.4-dev"
+            "dev-master": "3.5-dev"
         }
     },
     "config": {

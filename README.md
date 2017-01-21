@@ -6,9 +6,9 @@ Avatar Component provide support for driver based avatar provider for your Larav
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
 [![MIT License](https://img.shields.io/packagist/l/orchestra/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
-[![Build Status](https://img.shields.io/travis/orchestral/avatar/3.4.svg?style=flat-square)](https://travis-ci.org/orchestral/avatar)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/3.4.svg?style=flat-square)](https://coveralls.io/r/orchestral/avatar?branch=3.4)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/3.4.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/avatar/)
+[![Build Status](https://img.shields.io/travis/orchestral/avatar/master.svg?style=flat-square)](https://travis-ci.org/orchestral/avatar)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/master.svg?style=flat-square)](https://coveralls.io/r/orchestral/avatar?branch=master)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/avatar/)
 
 ## Table of Content
 
@@ -16,7 +16,7 @@ Avatar Component provide support for driver based avatar provider for your Larav
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Usage](#usage)
-* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v3-4)
+* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v3-5)
 
 ## Version Compatibility
 
@@ -29,6 +29,7 @@ Laravel  | Avatar
  5.2.x   | 3.2.x
  5.3.x   | 3.3.x
  5.4.x   | 3.4.x@dev
+ 5.5.x   | 3.5.x@dev
 
 ## Installation
 
