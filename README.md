@@ -16,7 +16,7 @@ Avatar Component provide support for driver based avatar provider for your Larav
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Usage](#usage)
-* [Change Log](http://orchestraplatform.com/docs/latest/components/avatar/changes#v3-5)
+* [Change Log](https://github.com/orchestral/avatar/releases)
 
 ## Version Compatibility
 
@@ -28,9 +28,9 @@ Laravel  | Avatar
  5.1.x   | 3.1.x
  5.2.x   | 3.2.x
  5.3.x   | 3.3.x
- 5.4.x   | 3.4.x@dev
+ 5.4.x   | 3.4.x
  5.5.x   | 3.5.x@dev
-
+ 
 ## Installation
 
 To install through composer, simply put the following in your `composer.json` file:
