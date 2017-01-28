@@ -16,7 +16,7 @@
         }
     },
     "require": {
-        "php": ">=7.0",
+        "php": ">=5.6.0",
         "orchestra/support-facades": "~3.4.0",
         "orchestra/support-providers": "~3.4.0"
     },
