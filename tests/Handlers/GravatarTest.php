@@ -1,9 +1,10 @@
 <?php namespace Orchestra\Avatar\Handlers\TestCase;
 
 use Mockery as m;
+use PHPUnit\Framework\TestCase;
 use Orchestra\Avatar\Handlers\Gravatar;
 
-class GravatarTest extends \PHPUnit_Framework_TestCase
+class GravatarTest extends TestCase
 {
     /**
      * Teardown the test environment.

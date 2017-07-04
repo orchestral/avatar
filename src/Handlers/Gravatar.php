@@ -30,7 +30,7 @@ class Gravatar extends Handler implements HandlerContract
             $this->getGravatarSize()
         );
 
-        if (! is_null($default = Arr::get($this->config, 'gravatar.default'))) {
+        if (! is_null($default = $this->config['gravatar']['default'] ?? null)) {
             $url .= '&d='.urlencode($default);
         }
 
@@ -56,6 +56,6 @@ class Gravatar extends Handler implements HandlerContract
     {
         $size = $this->getSize();
 
-        return Arr::get($this->config, "sizes.{$size}", (is_int($size) ? $size : 'small'));
+        return $this->config['sizes'][$size] ?? (is_int($size) ? $size : 'small');
     }
 }

@@ -21,9 +21,10 @@
         "orchestra/support-providers": "~3.5.0"
     },
     "require-dev": {
-        "mockery/mockery": "^0.9.4",
         "illuminate/container": "~5.5.0",
-        "illuminate/database": "~5.5.0"
+        "illuminate/database": "~5.5.0",
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "~6.0"
     },
     "extra": {
         "branch-alias": {

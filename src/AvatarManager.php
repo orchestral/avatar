@@ -34,7 +34,7 @@ class AvatarManager extends Manager
      */
     public function getDefaultDriver()
     {
-        return Arr::get($this->config, 'driver', 'gravatar');
+        return $this->config['driver'] ?? 'gravatar';
     }
 
     /**

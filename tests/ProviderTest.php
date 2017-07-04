@@ -2,8 +2,9 @@
 
 use Mockery as m;
 use Orchestra\Avatar\Provider;
+use PHPUnit\Framework\TestCase;
 
-class ProviderTest extends \PHPUnit_Framework_TestCase
+class ProviderTest extends TestCase
 {
     /**
      * Teardown the test environment.

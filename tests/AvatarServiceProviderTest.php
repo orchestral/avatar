@@ -1,10 +1,11 @@
 <?php namespace Orchestra\Avatar\TestCase;
 
 use Mockery as m;
+use PHPUnit\Framework\TestCase;
 use Illuminate\Container\Container;
 use Orchestra\Avatar\AvatarServiceProvider;
 
-class AvatarServiceProviderTest extends \PHPUnit_Framework_TestCase
+class AvatarServiceProviderTest extends TestCase
 {
     /**
      * Teardown the test environment.
