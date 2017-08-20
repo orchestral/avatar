@@ -3,12 +3,11 @@ Avatar Component for Orchestra Platform
 
 Avatar Component provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform application.
 
-[![Latest Stable Version](https://img.shields.io/github/release/orchestral/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
-[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
-[![MIT License](https://img.shields.io/packagist/l/orchestra/avatar.svg?style=flat-square)](https://packagist.org/packages/orchestra/avatar)
-[![Build Status](https://img.shields.io/travis/orchestral/avatar/master.svg?style=flat-square)](https://travis-ci.org/orchestral/avatar)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/avatar/master.svg?style=flat-square)](https://coveralls.io/r/orchestral/avatar?branch=master)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/avatar/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/avatar/)
+[![Build Status](https://travis-ci.org/orchestral/avatar.svg?branch=master)](https://travis-ci.org/orchestral/avatar)
+[![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/version)](https://packagist.org/packages/orchestra/avatar)
+[![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads)](https://packagist.org/packages/orchestra/avatar)
+[![Latest Unstable Version](https://poser.pugx.org/orchestra/avatar/v/unstable)](//packagist.org/packages/orchestra/avatar)
+[![License](https://poser.pugx.org/orchestra/avatar/license)](https://packagist.org/packages/orchestra/avatar)
 
 ## Table of Content
 
@@ -16,7 +15,7 @@ Avatar Component provide support for driver based avatar provider for your Larav
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Usage](#usage)
-* [Change Log](https://github.com/orchestral/avatar/releases)
+* [Changelog](https://github.com/orchestral/avatar/releases)
 
 ## Version Compatibility
 
