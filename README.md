@@ -3,7 +3,7 @@ Avatar Component for Orchestra Platform
 
 Avatar Component provide support for driver based avatar provider for your Laravel, PHP or Orchestra Platform application.
 
-[![Build Status](https://travis-ci.org/orchestral/avatar.svg?branch=3.5)](https://travis-ci.org/orchestral/avatar)
+[![Build Status](https://travis-ci.org/orchestral/avatar.svg?branch=master)](https://travis-ci.org/orchestral/avatar)
 [![Latest Stable Version](https://poser.pugx.org/orchestra/avatar/version)](https://packagist.org/packages/orchestra/avatar)
 [![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads)](https://packagist.org/packages/orchestra/avatar)
 [![Latest Unstable Version](https://poser.pugx.org/orchestra/avatar/v/unstable)](//packagist.org/packages/orchestra/avatar)
@@ -28,6 +28,7 @@ Laravel  | Avatar
  5.3.x   | 3.3.x
  5.4.x   | 3.4.x
  5.5.x   | 3.5.x
+ 5.6.x   | 3.6.x@dev
  
 ## Installation
 
