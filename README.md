@@ -35,9 +35,9 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ```json
 {
-	"require": {
-		"orchestra/avatar": "~3.0"
-	}
+    "require": {
+        "orchestra/avatar": "~3.0"
+    }
 }
 ```
 
@@ -56,9 +56,9 @@ Add `Orchestra\Avatar\AvatarServiceProvider` service provider in `config/app.php
 ```php
 'providers' => [
 
-	// ...
+    // ...
 
-	Orchestra\Avatar\AvatarServiceProvider::class,
+    Orchestra\Avatar\AvatarServiceProvider::class,
 ],
 ```
 
@@ -67,7 +67,7 @@ You might also want to add `Orchestra\Support\Facades\Avatar` to class aliases i
 ```php
 'aliases' => [
 
-	// ...
+    // ...
 
     'Avatar' => Orchestra\Support\Facades\Avatar::class,
 ],
