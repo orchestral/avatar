@@ -48,7 +48,7 @@ abstract class Handler
      *
      * @return $this
      */
-    public function setIdentifierFromUser($user, $attribute = 'email')
+    public function setIdentifierFromUser($user, string $attribute = 'email')
     {
         return $this->setIdentifier($user->getAttribute($attribute));
     }
@@ -58,14 +58,14 @@ abstract class Handler
      *
      * @return string
      */
-    abstract public function render();
+    abstract public function render(): string;
 
     /**
      * Get user identifier.
      *
      * @return string
      */
-    public function getIdentifier()
+    public function getIdentifier(): string
     {
         return $this->identifier;
     }
@@ -77,7 +77,7 @@ abstract class Handler
      *
      * @return $this
      */
-    public function setIdentifier($identifier)
+    public function setIdentifier(string $identifier)
     {
         $this->identifier = $identifier;
 
@@ -89,7 +89,7 @@ abstract class Handler
      *
      * @return string
      */
-    public function getSize()
+    public function getSize(): string
     {
         return $this->size;
     }
@@ -101,7 +101,7 @@ abstract class Handler
      *
      * @return $this
      */
-    public function setSize($size)
+    public function setSize(string $size)
     {
         $this->size = $size;
 

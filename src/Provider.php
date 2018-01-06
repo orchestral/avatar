@@ -2,7 +2,7 @@
 
 namespace Orchestra\Avatar;
 
-use Orchestra\Avatar\Contracts\Handler as HandlerContract;
+use Orchestra\Avatar\Contracts\Handler;
 
 class Provider
 {
@@ -18,7 +18,7 @@ class Provider
      *
      * @param  \Orchestra\Avatar\Contracts\Handler  $handler
      */
-    public function __construct(HandlerContract $handler)
+    public function __construct(Contracts\Handler $handler)
     {
         $this->handler = $handler;
     }
@@ -30,7 +30,7 @@ class Provider
      *
      * @return \Orchestra\Avatar\Contracts\Handler
      */
-    public function make($identifier)
+    public function make($identifier): Contracts\Handler
     {
         return $this->handler->setIdentifier($identifier);
     }
@@ -42,7 +42,7 @@ class Provider
      *
      * @return \Orchestra\Avatar\Contracts\Handler
      */
-    public function user($user)
+    public function user($user): Contracts\Handler
     {
         return $this->handler->setIdentifierFromUser($user);
     }
@@ -52,7 +52,7 @@ class Provider
      *
      * @return \Orchestra\Avatar\Contracts\Handler
      */
-    public function getHandler()
+    public function getHandler(): Contracts\Handler
     {
         return $this->handler;
     }

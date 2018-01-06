@@ -21,7 +21,7 @@ class Gravatar extends Handler implements HandlerContract
     /**
      * {@inheritdoc}
      */
-    public function render()
+    public function render(): string
     {
         $url = sprintf(
             '%s/%s?s=%d',

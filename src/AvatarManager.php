@@ -20,7 +20,7 @@ class AvatarManager extends Manager
      *
      * @return \Orchestra\Avatar\Provider
      */
-    protected function createGravatarDriver()
+    protected function createGravatarDriver(): Provider
     {
         $config = $this->getConfiguration();
 
@@ -54,7 +54,7 @@ class AvatarManager extends Manager
      *
      * @return array
      */
-    public function getConfig()
+    public function getConfig(): array
     {
         return $this->config;
     }
@@ -66,7 +66,7 @@ class AvatarManager extends Manager
      *
      * @return $this
      */
-    public function setConfig(array $config)
+    public function setConfig(array $config): self
     {
         $this->config = $config;
 
@@ -78,7 +78,7 @@ class AvatarManager extends Manager
      *
      * @return array
      */
-    protected function getConfiguration()
+    protected function getConfiguration(): array
     {
         return Arr::except($this->config, 'driver');
     }

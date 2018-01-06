@@ -9,7 +9,7 @@ interface Handler
      *
      * @return $this
      */
-    public function setIdentifier($identifier);
+    public function setIdentifier(string $identifier);
 
     /**
      * @param  \Illuminate\Database\Eloquent\Model|object  $user
@@ -17,14 +17,14 @@ interface Handler
      *
      * @return $this
      */
-    public function setIdentifierFromUser($user, $attribute = 'email');
+    public function setIdentifierFromUser($user, string $attribute = 'email');
 
     /**
      * @param  string  $size
      *
      * @return $this
      */
-    public function setSize($size);
+    public function setSize(string $size);
 
     /**
      * Large size.
@@ -52,5 +52,5 @@ interface Handler
      *
      * @return string
      */
-    public function render();
+    public function render(): string;
 }
