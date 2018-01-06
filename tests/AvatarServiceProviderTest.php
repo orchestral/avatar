@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Avatar\TestCase;
+<?php
+
+namespace Orchestra\Avatar\TestCase;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
@@ -56,7 +58,7 @@ class AvatarServiceProviderTest extends TestCase
      */
     public function testBootMethod()
     {
-        $app  = new Container();
+        $app = new Container();
         $config = m::mock('\Illuminate\Contracts\Config\Repository', '\ArrayAccess');
 
         $app->instance('config', $config);

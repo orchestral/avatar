@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Avatar\TestCase;
+<?php
+
+namespace Orchestra\Avatar\TestCase;
 
 use Mockery as m;
 use Orchestra\Avatar\Provider;
@@ -37,7 +39,7 @@ class ProviderTest extends TestCase
      */
     public function testUserMethod()
     {
-        $user    = m::mock('\Illuminate\Database\Eloquent\Model');
+        $user = m::mock('\Illuminate\Database\Eloquent\Model');
         $handler = m::mock('\Orchestra\Avatar\Contracts\Handler', '\Orchestra\Avatar\Handler');
 
         $handler->shouldReceive('setIdentifierFromUser')->once()->with($user)->andReturnSelf();

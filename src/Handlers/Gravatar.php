@@ -2,7 +2,6 @@
 
 namespace Orchestra\Avatar\Handlers;
 
-use Illuminate\Support\Arr;
 use Orchestra\Avatar\Handler;
 use Orchestra\Avatar\Contracts\Handler as HandlerContract;
 
