@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Avatar\Handlers\TestCase;
+<?php
+
+namespace Orchestra\Avatar\Handlers\TestCase;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
@@ -40,12 +42,12 @@ class GravatarTest extends TestCase
      */
     public function testRenderMethod()
     {
-        $user   = m::mock('\Illuminate\Database\Eloquent\Model');
+        $user = m::mock('\Illuminate\Database\Eloquent\Model');
         $config = [
             'sizes' => [
-                'small'  => '50',
+                'small' => '50',
                 'medium' => '100',
-                'large'  => '150',
+                'large' => '150',
             ],
         ];
 
@@ -69,12 +71,12 @@ class GravatarTest extends TestCase
      */
     public function testRenderMethodWithDefaultUrl()
     {
-        $user   = m::mock('\Illuminate\Database\Eloquent\Model');
+        $user = m::mock('\Illuminate\Database\Eloquent\Model');
         $config = [
             'sizes' => [
-                'small'  => '50',
+                'small' => '50',
                 'medium' => '100',
-                'large'  => '150',
+                'large' => '150',
             ],
             'gravatar' => [
                 'default' => 'http://foobar.com/images.jpg',

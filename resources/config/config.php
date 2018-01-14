@@ -16,9 +16,9 @@ return [
     */
 
     'sizes' => [
-        'small'  => '50',
+        'small' => '50',
         'medium' => '100',
-        'large'  => '150',
+        'large' => '150',
     ],
 
     /*
