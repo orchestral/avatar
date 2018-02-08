@@ -12,31 +12,21 @@ class AvatarServiceProviderTest extends TestCase
     /**
      * Teardown the test environment.
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
         m::close();
     }
 
-    /**
-     * Test Orchestra\Avatar\AvatarServiceProvider is a deferred service
-     * provider.
-     *
-     * @test
-     */
-    public function testIsDeferredService()
+    /** @test */
+    public function it_deferred_registering_the_services()
     {
         $stub = new AvatarServiceProvider(null);
 
         $this->assertTrue($stub->isDeferred());
     }
 
-    /**
-     * Test Orchestra\Avatar\AvatarServiceProvider::register()
-     * method.
-     *
-     * @test
-     */
-    public function testRegisterMethod()
+    /** @test */
+    public function it_registers_expected_services()
     {
         $app = m::mock('\Illuminate\Container\Container', '\Illuminate\Contracts\Foundation\Application[make]')->makePartial();
         $config = m::mock('\Illuminate\Contracts\Config\Repository', '\ArrayAccess');
@@ -50,12 +40,7 @@ class AvatarServiceProviderTest extends TestCase
         $this->assertInstanceOf('\Orchestra\Avatar\AvatarManager', $app['orchestra.avatar']);
     }
 
-    /**
-     * Test Orchestra\Avatar\AvatarServiceProvider::boot()
-     * method.
-     *
-     * @test
-     */
+    /** @test */
     public function testBootMethod()
     {
         $app = new Container();
@@ -76,13 +61,8 @@ class AvatarServiceProviderTest extends TestCase
         $this->assertNull($stub->boot());
     }
 
-    /**
-     * Test Orchestra\Avatar\AvatarServiceProvider::provides()
-     * method.
-     *
-     * @test
-     */
-    public function testProvidesMethod()
+    /** @test */
+    public function it_can_provides_expected_services()
     {
         $stub = new AvatarServiceProvider(null);
 

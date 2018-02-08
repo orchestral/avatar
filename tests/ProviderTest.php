@@ -11,17 +11,13 @@ class ProviderTest extends TestCase
     /**
      * Teardown the test environment.
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
         m::close();
     }
 
-    /**
-     * Test Orchestra\Avatar\Provider::make() method.
-     *
-     * @test
-     */
-    public function testMakeMethod()
+    /** @test */
+    public function it_can_make_an_avatar_from_email_address()
     {
         $handler = m::mock('\Orchestra\Avatar\Contracts\Handler');
 
@@ -32,12 +28,9 @@ class ProviderTest extends TestCase
         $this->assertEquals($handler, $stub->make('admin@orchestraplatform.com'));
     }
 
-    /**
-     * Test Orchestra\Avatar\Provider::user() method.
-     *
-     * @test
-     */
-    public function testUserMethod()
+
+    /** @test */
+    public function it_can_make_an_avatar_from_user_instance()
     {
         $user = m::mock('\Illuminate\Database\Eloquent\Model');
         $handler = m::mock('\Orchestra\Avatar\Contracts\Handler', '\Orchestra\Avatar\Handler');

@@ -11,18 +11,13 @@ class GravatarTest extends TestCase
     /**
      * Teardown the test environment.
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
         m::close();
     }
 
-    /**
-     * Test Orchestra\Avatar\GravatarHandler::setIdentifierByUser()
-     * method.
-     *
-     * @test
-     */
-    public function testSetIdentifierByUserMethod()
+    /** @test */
+    public function it_can_set_identifier_by_user()
     {
         $user = m::mock('\Illuminate\Database\Eloquent\Model');
 
@@ -34,13 +29,8 @@ class GravatarTest extends TestCase
         $this->assertEquals('admin@orchestraplatform.com', $stub->getIdentifier());
     }
 
-    /**
-     * Test Orchestra\Avatar\GravatarHandler::render()
-     * method.
-     *
-     * @test
-     */
-    public function testRenderMethod()
+    /** @test */
+    public function it_can_render_the_avatar()
     {
         $user = m::mock('\Illuminate\Database\Eloquent\Model');
         $config = [
@@ -69,7 +59,7 @@ class GravatarTest extends TestCase
      *
      * @test
      */
-    public function testRenderMethodWithDefaultUrl()
+    public function it_can_render_the_default_avatar_for_unknown_email()
     {
         $user = m::mock('\Illuminate\Database\Eloquent\Model');
         $config = [

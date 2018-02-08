@@ -11,18 +11,13 @@ class AvatarManagerTest extends TestCase
     /**
      * Teardown the test environment.
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
         m::close();
     }
 
-    /**
-     * Test Orchestra\Avatar\AvatarManager::getDefaultDriver()
-     * method.
-     *
-     * @test
-     */
-    public function testGetDefaultDriverMethod()
+    /** @test */
+    public function it_can_resolve_default_driver()
     {
         $config = [
             'driver' => 'gravatar',
@@ -34,13 +29,8 @@ class AvatarManagerTest extends TestCase
         $this->assertEquals('gravatar', $stub->getDefaultDriver());
     }
 
-    /**
-     * Test Orchestra\Avatar\AvatarManager::createGravatarDriver()
-     * method.
-     *
-     * @test
-     */
-    public function testCreateGravatarDriverMethod()
+    /** @test */
+    public function it_can_create_gravatar_driver()
     {
         $stub = new AvatarManager(null);
         $stub->setConfig([]);
