@@ -28,7 +28,6 @@ class ProviderTest extends TestCase
         $this->assertEquals($handler, $stub->make('admin@orchestraplatform.com'));
     }
 
-
     /** @test */
     public function it_can_make_an_avatar_from_user_instance()
     {
