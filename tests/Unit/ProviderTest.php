@@ -1,6 +1,6 @@
 <?php
 
-namespace Orchestra\Avatar\TestCase;
+namespace Orchestra\Avatar\TestCase\Unit;
 
 use Mockery as m;
 use Orchestra\Avatar\Provider;
@@ -27,7 +27,6 @@ class ProviderTest extends TestCase
 
         $this->assertEquals($handler, $stub->make('admin@orchestraplatform.com'));
     }
-
 
     /** @test */
     public function it_can_make_an_avatar_from_user_instance()

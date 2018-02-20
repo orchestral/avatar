@@ -1,6 +1,6 @@
 <?php
 
-namespace Orchestra\Avatar\Handlers\TestCase;
+namespace Orchestra\Avatar\TestCase\Unit\Handlers;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
