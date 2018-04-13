@@ -1,5 +1,5 @@
 {
-	"name": "orchestra/avatar",
+	"name": "orchestral/avatar",
 	"description": "Avatar Package for Laravel and PHP",
 	"license": "MIT",
 	"keywords": ["orchestra-platform", "orchestral", "laravel", "avatar", "gravatar"],
