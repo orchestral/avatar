@@ -8,6 +8,7 @@ Avatar Component provide support for driver based avatar provider for your Larav
 [![Total Downloads](https://poser.pugx.org/orchestra/avatar/downloads)](https://packagist.org/packages/orchestra/avatar)
 [![Latest Unstable Version](https://poser.pugx.org/orchestra/avatar/v/unstable)](//packagist.org/packages/orchestra/avatar)
 [![License](https://poser.pugx.org/orchestra/avatar/license)](https://packagist.org/packages/orchestra/avatar)
+[![Coverage Status](https://coveralls.io/repos/github/orchestral/avatar/badge.svg?branch=3.6)](https://coveralls.io/github/orchestral/avatar?branch=3.6)
 
 ## Table of Content
 
