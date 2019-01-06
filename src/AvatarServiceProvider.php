@@ -4,16 +4,10 @@ namespace Orchestra\Avatar;
 
 use Illuminate\Contracts\Foundation\Application;
 use Orchestra\Support\Providers\ServiceProvider;
+use Illuminate\Contracts\Support\DeferrableProvider;
 
-class AvatarServiceProvider extends ServiceProvider
+class AvatarServiceProvider extends ServiceProvider implements DeferrableProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-
     /**
      * Register the service provider.
      *
