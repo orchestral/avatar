@@ -47,10 +47,10 @@ class GravatarTest extends TestCase
 
         $stub->setIdentifierFromUser($user);
 
-        $this->assertContains('16b8346897684007cd4fb6e7e55204a7?s=50', $stub->small()->render());
-        $this->assertContains('16b8346897684007cd4fb6e7e55204a7?s=100', $stub->medium()->render());
-        $this->assertContains('16b8346897684007cd4fb6e7e55204a7?s=150', $stub->large()->render());
-        $this->assertContains('16b8346897684007cd4fb6e7e55204a7?s=150', (string) $stub->large());
+        $this->assertStringContainsString('16b8346897684007cd4fb6e7e55204a7?s=50', $stub->small()->render());
+        $this->assertStringContainsString('16b8346897684007cd4fb6e7e55204a7?s=100', $stub->medium()->render());
+        $this->assertStringContainsString('16b8346897684007cd4fb6e7e55204a7?s=150', $stub->large()->render());
+        $this->assertStringContainsString('16b8346897684007cd4fb6e7e55204a7?s=150', (string) $stub->large());
     }
 
     /**
@@ -79,6 +79,8 @@ class GravatarTest extends TestCase
 
         $stub->setIdentifierFromUser($user);
 
-        $this->assertContains('16b8346897684007cd4fb6e7e55204a7?s=50&d=http%3A%2F%2Ffoobar.com%2Fimages.jpg', $stub->small()->render());
+        $this->assertStringContainsString(
+            '16b8346897684007cd4fb6e7e55204a7?s=50&d=http%3A%2F%2Ffoobar.com%2Fimages.jpg', $stub->small()->render()
+        );
     }
 }
