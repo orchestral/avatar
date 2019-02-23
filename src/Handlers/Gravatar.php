@@ -29,8 +29,8 @@ class Gravatar extends Handler implements HandlerContract
             $this->getGravatarSize()
         );
 
-        if (! is_null($default = $this->config['gravatar']['default'] ?? null)) {
-            $url .= '&d='.urlencode($default);
+        if (! \is_null($default = $this->config['gravatar']['default'] ?? null)) {
+            $url .= '&d='.\urlencode($default);
         }
 
         return $url;
@@ -43,7 +43,7 @@ class Gravatar extends Handler implements HandlerContract
      */
     protected function getGravatarIdentifier()
     {
-        return md5(strtolower(trim($this->getIdentifier())));
+        return \md5(\strtolower(\trim($this->getIdentifier())));
     }
 
     /**
@@ -55,6 +55,6 @@ class Gravatar extends Handler implements HandlerContract
     {
         $size = $this->getSize();
 
-        return $this->config['sizes'][$size] ?? (is_int($size) ? $size : 'small');
+        return $this->config['sizes'][$size] ?? (\is_int($size) ? $size : 'small');
     }
 }

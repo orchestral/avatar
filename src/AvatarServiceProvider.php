@@ -38,7 +38,7 @@ class AvatarServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $path = realpath(__DIR__.'/../resources');
+        $path = \realpath(__DIR__.'/../resources');
 
         $this->addConfigComponent('orchestra/avatar', 'orchestra/avatar', $path.'/config');
 
@@ -59,7 +59,7 @@ class AvatarServiceProvider extends ServiceProvider
         $this->mergeConfigFrom("{$path}/config/config.php", 'orchestra.avatar');
 
         $this->publishes([
-            "{$path}/config/config.php" => config_path('orchestra/avatar.php'),
+            "{$path}/config/config.php" => \config_path('orchestra/avatar.php'),
         ]);
     }
 
