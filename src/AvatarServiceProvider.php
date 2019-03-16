@@ -32,7 +32,7 @@ class AvatarServiceProvider extends ServiceProvider implements DeferrableProvide
      */
     public function boot()
     {
-        $path = \realpath(__DIR__.'/../resources');
+        $path = \realpath(__DIR__.'/../');
 
         $this->addConfigComponent('orchestra/avatar', 'orchestra/avatar', $path.'/config');
 
