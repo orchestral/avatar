@@ -2,7 +2,7 @@
 
 namespace Orchestra\Avatar;
 
-use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Container\Container;
 use Orchestra\Support\Providers\ServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
 
@@ -15,7 +15,7 @@ class AvatarServiceProvider extends ServiceProvider implements DeferrableProvide
      */
     public function register()
     {
-        $this->app->singleton('orchestra.avatar', function (Application $app) {
+        $this->app->singleton('orchestra.avatar', function (Container $app) {
             $manager = new AvatarManager($app);
             $namespace = $this->hasPackageRepository() ? 'orchestra/avatar::' : 'orchestra.avatar';
 
