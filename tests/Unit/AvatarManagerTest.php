@@ -23,7 +23,10 @@ class AvatarManagerTest extends TestCase
             'driver' => 'gravatar',
         ];
 
-        $stub = new AvatarManager(null);
+        $container = m::mock('Illuminate\Contracts\Container\Container');
+        $container->shouldReceive('make')->with('config')->andReturn(m::mock('Illuminate\Contracts\Config\Repository'));
+
+        $stub = new AvatarManager($container);
         $stub->setConfig($config);
 
         $this->assertEquals('gravatar', $stub->getDefaultDriver());
@@ -32,12 +35,15 @@ class AvatarManagerTest extends TestCase
     /** @test */
     public function it_can_create_gravatar_driver()
     {
-        $stub = new AvatarManager(null);
+        $container = m::mock('Illuminate\Contracts\Container\Container');
+        $container->shouldReceive('make')->with('config')->andReturn(m::mock('Illuminate\Contracts\Config\Repository'));
+
+        $stub = new AvatarManager($container);
         $stub->setConfig([]);
 
         $gravatar = $stub->driver('gravatar');
 
-        $this->assertInstanceOf('\Orchestra\Avatar\Provider', $gravatar);
-        $this->assertInstanceOf('\Orchestra\Avatar\Handlers\Gravatar', $gravatar->getHandler());
+        $this->assertInstanceOf('Orchestra\Avatar\Provider', $gravatar);
+        $this->assertInstanceOf('Orchestra\Avatar\Handlers\Gravatar', $gravatar->getHandler());
     }
 }
