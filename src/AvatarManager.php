@@ -5,15 +5,11 @@ namespace Orchestra\Avatar;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Manager;
 use Orchestra\Avatar\Handlers\Gravatar;
+use Orchestra\Support\Concerns\WithConfiguration;
 
 class AvatarManager extends Manager
 {
-    /**
-     * Configuration values.
-     *
-     * @var array
-     */
-    protected $config = [];
+    use WithConfiguration;
 
     /**
      * Get Gravatar driver.
@@ -22,9 +18,9 @@ class AvatarManager extends Manager
      */
     protected function createGravatarDriver(): Provider
     {
-        $config = $this->getConfiguration();
-
-        return new Provider(new Gravatar($config));
+        return new Provider(new Gravatar(
+            Arr::except($this->configurations, 'driver')
+        ));
     }
 
     /**
@@ -34,7 +30,7 @@ class AvatarManager extends Manager
      */
     public function getDefaultDriver()
     {
-        return $this->config['driver'] ?? 'gravatar';
+        return $this->configurations['driver'] ?? 'gravatar';
     }
 
     /**
@@ -46,40 +42,6 @@ class AvatarManager extends Manager
      */
     public function setDefaultDriver($name)
     {
-        $this->config['driver'] = $name;
-    }
-
-    /**
-     * Get configuration values.
-     *
-     * @return array
-     */
-    public function getConfig(): array
-    {
-        return $this->config;
-    }
-
-    /**
-     * Set configuration.
-     *
-     * @param  array  $config
-     *
-     * @return $this
-     */
-    public function setConfig(array $config)
-    {
-        $this->config = $config;
-
-        return $this;
-    }
-
-    /**
-     * Get avatar configuration.
-     *
-     * @return array
-     */
-    protected function getConfiguration(): array
-    {
-        return Arr::except($this->config, 'driver');
+        $this->configurations['driver'] = $name;
     }
 }

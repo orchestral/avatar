@@ -27,7 +27,7 @@ class AvatarManagerTest extends TestCase
         $container->shouldReceive('make')->with('config')->andReturn(m::mock('Illuminate\Contracts\Config\Repository'));
 
         $stub = new AvatarManager($container);
-        $stub->setConfig($config);
+        $stub->setConfiguration($config);
 
         $this->assertEquals('gravatar', $stub->getDefaultDriver());
     }
@@ -39,7 +39,7 @@ class AvatarManagerTest extends TestCase
         $container->shouldReceive('make')->with('config')->andReturn(m::mock('Illuminate\Contracts\Config\Repository'));
 
         $stub = new AvatarManager($container);
-        $stub->setConfig([]);
+        $stub->setConfiguration([]);
 
         $gravatar = $stub->driver('gravatar');
 

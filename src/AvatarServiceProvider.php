@@ -19,7 +19,7 @@ class AvatarServiceProvider extends ServiceProvider implements DeferrableProvide
             $manager = new AvatarManager($app);
             $namespace = $this->hasPackageRepository() ? 'orchestra/avatar::' : 'orchestra.avatar';
 
-            $manager->setConfig($app->make('config')->get($namespace));
+            $manager->setConfiguration($app->make('config')->get($namespace));
 
             return $manager;
         });
