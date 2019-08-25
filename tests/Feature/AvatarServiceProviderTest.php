@@ -1,6 +1,6 @@
 <?php
 
-namespace Orchestra\Avatar\TestCase\Feature;
+namespace Orchestra\Avatar\Tests\Feature;
 
 class AvatarServiceProviderTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Orchestra\Avatar\TestCase\Unit;
+namespace Orchestra\Avatar\Tests\Unit;
 
 use Mockery as m;
 use Orchestra\Avatar\Provider;

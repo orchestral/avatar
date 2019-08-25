@@ -17,7 +17,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Orchestra\\Avatar\\TestCase\\": "tests/"
+            "Orchestra\\Avatar\\Tests\\": "tests/"
         }
     },
     "require": {
