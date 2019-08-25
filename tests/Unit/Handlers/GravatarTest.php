@@ -19,7 +19,7 @@ class GravatarTest extends TestCase
     /** @test */
     public function it_can_set_identifier_by_user()
     {
-        $user = m::mock('\Illuminate\Database\Eloquent\Model');
+        $user = m::mock('Illuminate\Database\Eloquent\Model');
 
         $stub = new Gravatar([]);
 
@@ -32,7 +32,7 @@ class GravatarTest extends TestCase
     /** @test */
     public function it_can_render_the_avatar()
     {
-        $user = m::mock('\Illuminate\Database\Eloquent\Model');
+        $user = m::mock('Illuminate\Database\Eloquent\Model');
         $config = [
             'sizes' => [
                 'small' => '50',
@@ -61,7 +61,7 @@ class GravatarTest extends TestCase
      */
     public function it_can_render_the_default_avatar_for_unknown_email()
     {
-        $user = m::mock('\Illuminate\Database\Eloquent\Model');
+        $user = m::mock('Illuminate\Database\Eloquent\Model');
         $config = [
             'sizes' => [
                 'small' => '50',

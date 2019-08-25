@@ -19,7 +19,7 @@ class ProviderTest extends TestCase
     /** @test */
     public function it_can_make_an_avatar_from_email_address()
     {
-        $handler = m::mock('\Orchestra\Avatar\Contracts\Handler');
+        $handler = m::mock('Orchestra\Avatar\Contracts\Handler');
 
         $handler->shouldReceive('setIdentifier')->once()->with('admin@orchestraplatform.com')->andReturnSelf();
 
@@ -31,8 +31,8 @@ class ProviderTest extends TestCase
     /** @test */
     public function it_can_make_an_avatar_from_user_instance()
     {
-        $user = m::mock('\Illuminate\Database\Eloquent\Model');
-        $handler = m::mock('\Orchestra\Avatar\Contracts\Handler', '\Orchestra\Avatar\Handler');
+        $user = m::mock('Illuminate\Database\Eloquent\Model');
+        $handler = m::mock('Orchestra\Avatar\Contracts\Handler', 'Orchestra\Avatar\Handler');
 
         $handler->shouldReceive('setIdentifierFromUser')->once()->with($user)->andReturnSelf();
 
