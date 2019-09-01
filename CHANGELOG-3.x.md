@@ -1,10 +1,10 @@
-# Changelog
+# Changelog for 3.x
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/avatar`.
 
 ## 3.8.0
 
-Released: 2018-03-02
+Released: 2019-03-02
 
 ### Changes
 
