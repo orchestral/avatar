@@ -1,7 +1,7 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-            ->in(__DIR__.'/resources')
+            ->in(__DIR__.'/config')
             ->in(__DIR__.'/src')
             ->in(__DIR__.'/tests');
 
@@ -16,7 +16,7 @@ return PhpCsFixer\Config::create()
                 'no_extra_consecutive_blank_lines' => false,
                 'no_unneeded_control_parentheses' => false,
                 'not_operator_with_successor_space' => true,
-                'ordered_imports' => ['sortAlgorithm' => 'length'],
+                'ordered_imports' => ['sortAlgorithm' => 'alpha'],
                 'phpdoc_align' => false,
                 'phpdoc_no_empty_return' => false,
                 'phpdoc_order' => true,

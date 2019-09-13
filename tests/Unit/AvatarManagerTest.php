@@ -3,8 +3,8 @@
 namespace Orchestra\Avatar\Tests\Unit;
 
 use Mockery as m;
-use PHPUnit\Framework\TestCase;
 use Orchestra\Avatar\AvatarManager;
+use PHPUnit\Framework\TestCase;
 
 class AvatarManagerTest extends TestCase
 {

@@ -3,8 +3,8 @@
 namespace Orchestra\Avatar\Tests\Unit\Handlers;
 
 use Mockery as m;
-use PHPUnit\Framework\TestCase;
 use Orchestra\Avatar\Handlers\Gravatar;
+use PHPUnit\Framework\TestCase;
 
 class GravatarTest extends TestCase
 {
