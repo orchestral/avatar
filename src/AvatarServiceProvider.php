@@ -3,8 +3,8 @@
 namespace Orchestra\Avatar;
 
 use Illuminate\Contracts\Container\Container;
-use Orchestra\Support\Providers\ServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
+use Orchestra\Support\Providers\ServiceProvider;
 
 class AvatarServiceProvider extends ServiceProvider implements DeferrableProvider
 {

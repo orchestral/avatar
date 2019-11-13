@@ -2,8 +2,8 @@
 
 namespace Orchestra\Avatar\Handlers;
 
-use Orchestra\Avatar\Handler;
 use Orchestra\Avatar\Contracts\Handler as HandlerContract;
+use Orchestra\Avatar\Handler;
 
 class Gravatar extends Handler implements HandlerContract
 {
