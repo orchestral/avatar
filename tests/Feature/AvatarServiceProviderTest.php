@@ -9,6 +9,6 @@ class AvatarServiceProviderTest extends TestCase
     {
         $this->assertInstanceOf('Orchestra\Avatar\AvatarManager', $this->app['orchestra.avatar']);
         $this->assertSame('gravatar', $this->app['config']->get('orchestra.avatar.driver'));
-        $this->assertContains('Orchestra\Avatar\AvatarServiceProvider', $this->app->getLoadedProviders());
+        $this->assertContains('Orchestra\Avatar\AvatarServiceProvider', array_keys($this->app->getLoadedProviders()));
     }
 }
