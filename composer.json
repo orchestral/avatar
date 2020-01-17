@@ -22,11 +22,11 @@
     },
     "require": {
         "php": ">=7.2",
-        "orchestra/support": "^5.0"
+        "orchestra/support": "dev-master"
     },
     "require-dev": {
         "mockery/mockery": "^1.3",
-        "orchestra/testbench": "^5.0"
+        "orchestra/testbench": "dev-master"
     },
     "config": {
         "sort-packages": true
