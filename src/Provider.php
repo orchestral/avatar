@@ -15,8 +15,6 @@ class Provider
 
     /**
      * Construct a new avatar provider.
-     *
-     * @param  \Orchestra\Avatar\Contracts\Handler  $handler
      */
     public function __construct(Contracts\Handler $handler)
     {
@@ -25,12 +23,8 @@ class Provider
 
     /**
      * Make a new avatar by identifier.
-     *
-     * @param  string  $identifier
-     *
-     * @return \Orchestra\Avatar\Contracts\Handler
      */
-    public function make($identifier): Contracts\Handler
+    public function make(string $identifier): Contracts\Handler
     {
         return $this->handler->setIdentifier($identifier);
     }
@@ -39,8 +33,6 @@ class Provider
      * Make a new avatar by user object.
      *
      * @param  object  $user
-     *
-     * @return \Orchestra\Avatar\Contracts\Handler
      */
     public function user($user): Contracts\Handler
     {
@@ -49,8 +41,6 @@ class Provider
 
     /**
      * Get current handler.
-     *
-     * @return \Orchestra\Avatar\Contracts\Handler
      */
     public function getHandler(): Contracts\Handler
     {

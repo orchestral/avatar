@@ -26,6 +26,8 @@ abstract class Handler
     protected $identifier;
 
     /**
+     * Avatar size.
+     *
      * @var string
      */
     protected $size;
@@ -49,11 +51,6 @@ abstract class Handler
     {
         return $this->setIdentifier($user->getAttribute($attribute));
     }
-
-    /**
-     * Render the avatar.
-     */
-    abstract public function render(): string;
 
     /**
      * Get user identifier.
@@ -134,4 +131,9 @@ abstract class Handler
     {
         return $this->render();
     }
+
+    /**
+     * Render the avatar.
+     */
+    abstract public function render(): string;
 }
