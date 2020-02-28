@@ -38,20 +38,16 @@ class Gravatar extends Handler implements HandlerContract
 
     /**
      * Get Gravatar identifier.
-     *
-     * @return string
      */
-    protected function getGravatarIdentifier()
+    protected function getGravatarIdentifier(): string
     {
         return \md5(\strtolower(\trim($this->getIdentifier())));
     }
 
     /**
      * Get Gravatar size.
-     *
-     * @return mixed
      */
-    protected function getGravatarSize()
+    protected function getGravatarSize(): string
     {
         $size = $this->getSize();
 

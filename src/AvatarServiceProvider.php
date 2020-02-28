@@ -43,10 +43,6 @@ class AvatarServiceProvider extends ServiceProvider implements DeferrableProvide
 
     /**
      * Boot under Laravel setup.
-     *
-     * @param  string  $path
-     *
-     * @return void
      */
     protected function bootUsingLaravel(string $path): void
     {

@@ -26,14 +26,14 @@ abstract class Handler
     protected $identifier;
 
     /**
+     * Avatar size.
+     *
      * @var string
      */
     protected $size;
 
     /**
      * Construct a new Avatar handler.
-     *
-     * @param array  $config
      */
     public function __construct(array $config)
     {
@@ -44,7 +44,6 @@ abstract class Handler
      * Set identifier from user object.
      *
      * @param  \Illuminate\Database\Eloquent\Model|object  $user
-     * @param  string  $attribute
      *
      * @return $this
      */
@@ -54,16 +53,7 @@ abstract class Handler
     }
 
     /**
-     * Render the avatar.
-     *
-     * @return string
-     */
-    abstract public function render(): string;
-
-    /**
      * Get user identifier.
-     *
-     * @return string
      */
     public function getIdentifier(): string
     {
@@ -72,8 +62,6 @@ abstract class Handler
 
     /**
      * Set user identifier.
-     *
-     * @param  string  $identifier
      *
      * @return $this
      */
@@ -86,8 +74,6 @@ abstract class Handler
 
     /**
      * Get size.
-     *
-     * @return string
      */
     public function getSize(): string
     {
@@ -96,8 +82,6 @@ abstract class Handler
 
     /**
      * Set size.
-     *
-     * @param  string  $size
      *
      * @return $this
      */
@@ -147,4 +131,9 @@ abstract class Handler
     {
         return $this->render();
     }
+
+    /**
+     * Render the avatar.
+     */
+    abstract public function render(): string;
 }

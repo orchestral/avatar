@@ -13,8 +13,6 @@ class AvatarManager extends Manager
 
     /**
      * Get Gravatar driver.
-     *
-     * @return \Orchestra\Avatar\Provider
      */
     protected function createGravatarDriver(): Provider
     {
