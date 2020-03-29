@@ -2,6 +2,9 @@
 
 namespace Orchestra\Avatar\Handlers;
 
+use Orchestra\Avatar\Contracts\Handler as HandlerContract;
+use Orchestra\Avatar\Handler;
+
 class Adorable extends Handler implements HandlerContract
 {
     /**
@@ -22,8 +25,8 @@ class Adorable extends Handler implements HandlerContract
         $url = \sprintf(
             '%s/%d/%s.png',
             static::URL,
-            $this->getAvatarIdentifier(),
-            $this->getAvatarSize()
+            $this->getAvatarSize(),
+            $this->getAvatarIdentifier()
         );
 
         return $url;
