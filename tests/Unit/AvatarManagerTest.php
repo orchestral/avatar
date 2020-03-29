@@ -46,4 +46,19 @@ class AvatarManagerTest extends TestCase
         $this->assertInstanceOf('Orchestra\Avatar\Provider', $gravatar);
         $this->assertInstanceOf('Orchestra\Avatar\Handlers\Gravatar', $gravatar->getHandler());
     }
+
+    /** @test */
+    public function it_can_create_adorable_driver()
+    {
+        $container = m::mock('Illuminate\Contracts\Container\Container');
+        $container->shouldReceive('make')->with('config')->andReturn(m::mock('Illuminate\Contracts\Config\Repository'));
+
+        $stub = new AvatarManager($container);
+        $stub->setConfiguration([]);
+
+        $adorable = $stub->driver('adorable');
+
+        $this->assertInstanceOf('Orchestra\Avatar\Provider', $adorable);
+        $this->assertInstanceOf('Orchestra\Avatar\Handlers\Adorable', $adorable->getHandler());
+    }
 }
