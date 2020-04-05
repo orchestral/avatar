@@ -22,7 +22,7 @@ class Gravatar extends Handler implements HandlerContract
      */
     public function render(): string
     {
-        $url = sprintf(
+        $url = \sprintf(
             '%s/%s?s=%d',
             static::URL,
             $this->getGravatarIdentifier(),
@@ -51,6 +51,6 @@ class Gravatar extends Handler implements HandlerContract
     {
         $size = $this->getSize();
 
-        return $this->config['sizes'][$size] ?? (\is_int($size) ? $size : 'small');
+        return $this->config['sizes'][$size] ?? (\is_int($size) ? $size : $this->config['sizes']['small']);
     }
 }

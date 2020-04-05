@@ -14,11 +14,29 @@ class AvatarManager extends Manager
     /**
      * Get Gravatar driver.
      */
-    protected function createGravatarDriver(): Provider
+    protected function createAdorableDriver(): Provider
     {
-        return new Provider(new Gravatar(
+        return $this->createProvider(new Handlers\Adorable(
             Arr::except($this->configurations, 'driver')
         ));
+    }
+
+    /**
+     * Get Gravatar driver.
+     */
+    protected function createGravatarDriver(): Provider
+    {
+        return $this->createProvider(new Handlers\Gravatar(
+            Arr::except($this->configurations, 'driver')
+        ));
+    }
+
+    /**
+     * Create provider for Handler.
+     */
+    protected function createProvider(Handler $handler): Provider
+    {
+        return new Provider($handler);
     }
 
     /**
