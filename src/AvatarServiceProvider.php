@@ -16,12 +16,7 @@ class AvatarServiceProvider extends ServiceProvider implements DeferrableProvide
     public function register()
     {
         $this->app->singleton('orchestra.avatar', function (Container $app) {
-            $manager = new AvatarManager($app);
-            $namespace = $this->hasPackageRepository() ? 'orchestra/avatar::' : 'orchestra.avatar';
-
-            $manager->setConfiguration($app->make('config')->get($namespace));
-
-            return $manager;
+            return new AvatarManager($app);
         });
     }
 
@@ -39,6 +34,20 @@ class AvatarServiceProvider extends ServiceProvider implements DeferrableProvide
         if (! $this->hasPackageRepository()) {
             $this->bootUsingLaravel($path);
         }
+
+        $this->bootEvents();
+    }
+
+        /**
+     * Register memory events during booting.
+     */
+    protected function bootEvents(): void
+    {
+        $this->callAfterResolving('orchestra.avatar', function ($manager, $app) {
+            $namespace = $this->hasPackageRepository() ? 'orchestra/avatar::' : 'orchestra.avatar';
+
+            $manager->setConfiguration($app->make('config')->get($namespace));
+        });
     }
 
     /**
