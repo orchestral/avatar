@@ -21,11 +21,11 @@
         }
     },
     "require": {
-        "php": "^7.3 || ^8.0",
-        "orchestra/support": "^6.0"
+        "php": "^7.4 || ^8.0",
+        "orchestra/support": "^7.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.17"
+        "orchestra/testbench": "^7.0"
     },
     "extra": {
         "branch-alias": {
